@@ -1,0 +1,162 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Sat Feb 10 05:40:23 2018
+[*]
+[dumpfile] "C:\02_Elektronik\089_HPCalcs\02_Nut\01_Source\01_HDL\FUllNut_tb.vcd"
+[dumpfile_mtime] "Sat Feb 10 05:38:36 2018"
+[dumpfile_size] 61974646
+[savefile] "C:\02_Elektronik\089_HPCalcs\02_Nut\01_Source\01_HDL\FullNut_tb_gtkw.gtkw"
+[timestart] 0
+[size] 2560 1377
+[pos] -1 -1
+*-33.126404 53000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] nut.
+[treeopen] nut.add56.
+[sst_width] 211
+[signals_width] 214
+[sst_expanded] 1
+[sst_vpaned_height] 417
+@28
+nut.clk_in
+@24
+nut.inut_state
+@820
+[color] 2
+nut.dis.op[79:0]
+@22
+[color] 2
+nut.rom_addr[15:0]
+nut.rom_opcode[9:0]
+nut.rpc[15:0]
+nut.opcode[9:0]
+nut.second_opcode[9:0]
+nut.target_pc[15:0]
+@28
+nut.op_cxisa
+nut.op_disp_off
+nut.op_disp_toggle
+@22
+nut.op_field_dec_left[3:0]
+nut.op_field_dec_right[3:0]
+@24
+nut.op_field_left
+@25
+nut.op_field_right
+@28
+nut.op_if_c
+nut.op_if_nc
+nut.op_is_sub
+nut.op_jump
+nut.op_key_ack
+@22
+nut.op_lvalue[15:0]
+@28
+nut.op_nop
+nut.op_pop
+nut.op_push
+nut.op_reset_kb
+@22
+nut.op_selp
+nut.op_selq
+@28
+nut.rcy
+nut.op_set_carry_early
+nut.op_setdec
+nut.op_sethex
+nut.op_test_ext
+nut.op_test_kb
+nut.op_no_src_mask
+@22
+nut.ra[55:0]
+nut.rb[55:0]
+nut.rc[55:0]
+nut.rm[55:0]
+nut.rn[55:0]
+nut.rp[3:0]
+nut.pt[3:0]
+nut.rstk0[15:0]
+nut.rstk1[15:0]
+nut.rstk2[15:0]
+nut.rstk3[15:0]
+@28
+nut.last_carry
+nut.last_was_gosub
+nut.seq_pop
+@22
+nut.seq_da[11:0]
+nut.rda[11:0]
+@28
+nut.key_scan_o
+@22
+nut.reg_addr_o[11:0]
+nut.reg_data_o[55:0]
+nut.reg_perif_o[7:0]
+@28
+nut.reg_we_o
+@800200
+-ALU
+@28
+nut.decimal
+@22
+nut.seq_field_left
+nut.seq_field_right
+nut.mask[13:0]
+nut.reg_path_a_masked[55:0]
+nut.shf_reg_path_a[55:0]
+@24
+nut.seq_write_dst
+@22
+nut.result_to_dst[55:0]
+@28
+nut.alu_carry_out
+nut.cmp_eq
+nut.cmp_gt
+nut.cmp_neq
+@1000200
+-ALU
+@800200
+-LCD
+@24
+disp.active_digit
+@22
+disp.ra[47:0]
+disp.rb[47:0]
+disp.rc[47:0]
+@28
+disp.slra
+disp.slrb
+disp.slrc
+disp.srra
+disp.srrb
+disp.srrc
+@1000200
+-LCD
+@28
+nut.dis.decode_ready_in
+@24
+nut.inut_state
+@22
+nut.add56.s0.a_in[3:0]
+nut.add56.s0.b_in[3:0]
+nut.add56.s0.da_q[3:0]
+nut.add56.s0.q_out[3:0]
+nut.add56.s0.part_q[3:0]
+@28
+nut.add56.s0.c_in
+nut.add56.s0.as_in
+@22
+disp.cmdaddr
+disp.cmddata[7:0]
+@28
+disp.force_refresh
+@24
+disp.refresh_ti
+@28
+disp.ann_we_in
+@22
+disp.digit[6:0]
+@24
+disp.active_digit
+disp.active_vline
+[pattern_trace] 1
+[pattern_trace] 0

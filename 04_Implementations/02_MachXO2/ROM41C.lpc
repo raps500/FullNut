@@ -1,0 +1,51 @@
+[Device]
+Family=machxo2
+PartType=LCMXO2-7000HE
+PartName=LCMXO2-7000HE-4TG144C
+SpeedGrade=4
+Package=TQFP144
+OperatingCondition=COM
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=ROM
+CoreRevision=5.4
+ModuleName=ROM41C
+SourceFormat=VHDL
+ParameterFileVersion=1.0
+Date=01/23/2018
+Time=07:13:27
+
+[Parameters]
+Verilog=0
+VHDL=1
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+Address=12288
+Data=10
+enByte=0
+ByteSize=9
+OutputEn=0
+ClockEn=0
+Optimization=Speed
+Reset=Sync
+Reset1=Sync
+Init=0
+MemFile=c:/02_elektronik/089_hpcalcs/02_nut/02_roms/rom41c.bin
+MemFormat=hex
+EnECC=0
+Pipeline=0
+Write=Normal
+init_data=0
+
+[FilesGenerated]
+c:/02_elektronik/089_hpcalcs/02_nut/02_roms/rom41c.bin=mem
+
+[Command]
+cmd_line= -w -n ROM41C -lang vhdl -synth synplify -bus_exp 7 -bb -arch xo2c00 -type romblk -device LCMXO2-7000HE -addr_width 14 -data_width 10 -num_words 12288 -cascade -1 -memfile "c:/02_elektronik/089_hpcalcs/02_nut/02_roms/rom41c.bin" -memformat hex

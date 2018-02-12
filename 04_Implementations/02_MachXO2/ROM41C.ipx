@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="ROM41C" module="ROM" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2018 01 23 07:13:38.013" version="5.4" type="Module" synthesis="synplify" source_format="VHDL">
+  <Package>
+		<File name="" type="" modified="2018 01 23 07:13:38.012"/>
+		<File name="ROM41C.lpc" type="lpc" modified="2018 01 23 07:13:27.978"/>
+		<File name="ROM41C.vhd" type="top_level_vhdl" modified="2018 01 23 07:13:28.079"/>
+		<File name="ROM41C_tmpl.vhd" type="template_vhdl" modified="2018 01 23 07:13:28.082"/>
+		<File name="c:/02_elektronik/089_hpcalcs/02_nut/02_roms/rom41c.bin" type="mem" modified="2018 01 23 07:12:58.592"/>
+		<File name="tb_ROM41C_tmpl.vhd" type="testbench_vhdl" modified="2018 01 23 07:13:28.115"/>
+  </Package>
+</DiamondModule>

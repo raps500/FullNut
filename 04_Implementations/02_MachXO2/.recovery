@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="Nut_Main" device="LCMXO2-7000HE-4TG144C" default_implementation="nut_Main">
+    <Options/>
+    <Implementation title="nut_Main" dir="nut_Main" description="nut_Main" synthesis="synplify" default_strategy="Strategy1">
+        <Options def_top="FUllNut_lcmxo2" top="FUllNut_lcmxo2"/>
+        <Source name="../../01_Source/01_HDL/FullNut.vhdl" type="VHDL" type_short="VHDL">
+            <Options/>
+        </Source>
+        <Source name="../../01_Source/01_HDL/FullNut_lcmxo2.vhd" type="VHDL" type_short="VHDL">
+            <Options top_module="FUllNut_lcmxo2"/>
+        </Source>
+        <Source name="../../01_Source/01_HDL/nut_LCDDriver.vhdl" type="VHDL" type_short="VHDL">
+            <Options/>
+        </Source>
+        <Source name="ROM41C.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="../../01_Source/01_HDL/nut_disassembler_stub.vhdl" type="VHDL" type_short="VHDL">
+            <Options/>
+        </Source>
+        <Source name="../../01_Source/01_HDL/nut_MemModule_64.vhdl" type="VHDL" type_short="VHDL">
+            <Options/>
+        </Source>
+        <Source name="Nut_Main.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="Nut_Main1.sty"/>
+</BaliProject>

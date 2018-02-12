@@ -1,0 +1,2797 @@
+(edif ROM41C
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2018 1 23 7 13 28)
+      (program "SCUBA" (version "Diamond (64-bit) 3.9.0.99.2"))))
+      (comment "C:\lscc\diamond\3.9_x64\ispfpga\bin\nt64\scuba.exe -w -n ROM41C -lang vhdl -synth synplify -bus_exp 7 -bb -arch xo2c00 -type bram -wp 00 -rp 1100 -addr_width 14 -data_width 10 -num_rows 12288 -cascade -1 -memfile c:/02_elektronik/089_hpcalcs/02_nut/02_roms/rom41c.bin -memformat hex ")
+  (library ORCLIB
+    (edifLevel 0)
+    (technology
+      (numberDefinition))
+    (cell FD1P3DX
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port D
+            (direction INPUT))
+          (port SP
+            (direction INPUT))
+          (port CK
+            (direction INPUT))
+          (port CD
+            (direction INPUT))
+          (port Q
+            (direction OUTPUT)))))
+    (cell MUX21
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port D0
+            (direction INPUT))
+          (port D1
+            (direction INPUT))
+          (port SD
+            (direction INPUT))
+          (port Z
+            (direction OUTPUT)))))
+    (cell VHI
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port Z
+            (direction OUTPUT)))))
+    (cell VLO
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port Z
+            (direction OUTPUT)))))
+    (cell DP8KC
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port DIA8
+            (direction INPUT))
+          (port DIA7
+            (direction INPUT))
+          (port DIA6
+            (direction INPUT))
+          (port DIA5
+            (direction INPUT))
+          (port DIA4
+            (direction INPUT))
+          (port DIA3
+            (direction INPUT))
+          (port DIA2
+            (direction INPUT))
+          (port DIA1
+            (direction INPUT))
+          (port DIA0
+            (direction INPUT))
+          (port ADA12
+            (direction INPUT))
+          (port ADA11
+            (direction INPUT))
+          (port ADA10
+            (direction INPUT))
+          (port ADA9
+            (direction INPUT))
+          (port ADA8
+            (direction INPUT))
+          (port ADA7
+            (direction INPUT))
+          (port ADA6
+            (direction INPUT))
+          (port ADA5
+            (direction INPUT))
+          (port ADA4
+            (direction INPUT))
+          (port ADA3
+            (direction INPUT))
+          (port ADA2
+            (direction INPUT))
+          (port ADA1
+            (direction INPUT))
+          (port ADA0
+            (direction INPUT))
+          (port CEA
+            (direction INPUT))
+          (port OCEA
+            (direction INPUT))
+          (port CLKA
+            (direction INPUT))
+          (port WEA
+            (direction INPUT))
+          (port CSA2
+            (direction INPUT))
+          (port CSA1
+            (direction INPUT))
+          (port CSA0
+            (direction INPUT))
+          (port RSTA
+            (direction INPUT))
+          (port DIB8
+            (direction INPUT))
+          (port DIB7
+            (direction INPUT))
+          (port DIB6
+            (direction INPUT))
+          (port DIB5
+            (direction INPUT))
+          (port DIB4
+            (direction INPUT))
+          (port DIB3
+            (direction INPUT))
+          (port DIB2
+            (direction INPUT))
+          (port DIB1
+            (direction INPUT))
+          (port DIB0
+            (direction INPUT))
+          (port ADB12
+            (direction INPUT))
+          (port ADB11
+            (direction INPUT))
+          (port ADB10
+            (direction INPUT))
+          (port ADB9
+            (direction INPUT))
+          (port ADB8
+            (direction INPUT))
+          (port ADB7
+            (direction INPUT))
+          (port ADB6
+            (direction INPUT))
+          (port ADB5
+            (direction INPUT))
+          (port ADB4
+            (direction INPUT))
+          (port ADB3
+            (direction INPUT))
+          (port ADB2
+            (direction INPUT))
+          (port ADB1
+            (direction INPUT))
+          (port ADB0
+            (direction INPUT))
+          (port CEB
+            (direction INPUT))
+          (port OCEB
+            (direction INPUT))
+          (port CLKB
+            (direction INPUT))
+          (port WEB
+            (direction INPUT))
+          (port CSB2
+            (direction INPUT))
+          (port CSB1
+            (direction INPUT))
+          (port CSB0
+            (direction INPUT))
+          (port RSTB
+            (direction INPUT))
+          (port DOA8
+            (direction OUTPUT))
+          (port DOA7
+            (direction OUTPUT))
+          (port DOA6
+            (direction OUTPUT))
+          (port DOA5
+            (direction OUTPUT))
+          (port DOA4
+            (direction OUTPUT))
+          (port DOA3
+            (direction OUTPUT))
+          (port DOA2
+            (direction OUTPUT))
+          (port DOA1
+            (direction OUTPUT))
+          (port DOA0
+            (direction OUTPUT))
+          (port DOB8
+            (direction OUTPUT))
+          (port DOB7
+            (direction OUTPUT))
+          (port DOB6
+            (direction OUTPUT))
+          (port DOB5
+            (direction OUTPUT))
+          (port DOB4
+            (direction OUTPUT))
+          (port DOB3
+            (direction OUTPUT))
+          (port DOB2
+            (direction OUTPUT))
+          (port DOB1
+            (direction OUTPUT))
+          (port DOB0
+            (direction OUTPUT)))))
+    (cell ROM41C
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port (array (rename Address "Address(13:0)") 14)
+            (direction INPUT))
+          (port OutClock
+            (direction INPUT))
+          (port OutClockEn
+            (direction INPUT))
+          (port Reset
+            (direction INPUT))
+          (port (array (rename Q "Q(9:0)") 10)
+            (direction OUTPUT)))
+        (property NGD_DRC_MASK (integer 1))
+        (contents
+          (instance ROM41C_0_0_14
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x042100502010404050C0028C6000090044000081064800062A1648A00892120B4108200108002049"))
+            (property INITVAL_1E
+              (string "0x028900A8240A48B0A8A90A81010428000A0004C2120020202002C00000150A004108860B24908484"))
+            (property INITVAL_1D
+              (string "0x012550D42410240082001048800AC80D096004901601002A201542805241194850AA130CA4A08225"))
+            (property INITVAL_1C
+              (string "0x080800002D0044002240150AA0A05B050AD102511004000CD70F45E1A23A1085A1327A0AA4815810"))
+            (property INITVAL_1B
+              (string "0x0A4480088A044C902A520088212840010220C4A00A80515220100050280A0980200A130209100804"))
+            (property INITVAL_1A
+              (string "0x00200020000000102A50120000163004410004270021012019012120C201012240909B0C44010210"))
+            (property INITVAL_19
+              (string "0x1004004010144440AC4409000000000200A14A44100910009208408000240900200000000A405208"))
+            (property INITVAL_18
+              (string "0x0088015A31040210000C024120080810080008A8000A01040A080800200401008102220509000042"))
+            (property INITVAL_17
+              (string "0x0008000884000290804000648000200120800404000180048013000012840000000465028101142A"))
+            (property INITVAL_16
+              (string "0x01EFD0020002433024001C0800002000C011A01012240090000081002613040AB0409900A0910A33"))
+            (property INITVAL_15
+              (string "0x112D0180940042202200004000228A01A010A8C6056790AC061627101A02056D80AA2600A521809B"))
+            (property INITVAL_14
+              (string "0x00000014A4020210400015001092530E4A8198D2038890E2001422203A8800488008210C00003C18"))
+            (property INITVAL_13
+              (string "0x0400802A0B1C8841A603160CD092FA0200E0408502838108CA00A0801458158F21A669068570AA34"))
+            (property INITVAL_12
+              (string "0x0024E12A151AA5D0AC2B0C25516A8C164C70A2D50BC9C1563D0208408209124A1128620643412462"))
+            (property INITVAL_11
+              (string "0x14CA1018BD028B215895096D614C80178D10AA7514644156A41C2A6062440C85605A1414C96126A9"))
+            (property INITVAL_10
+              (string "0x0424C0A4C5104810B2C9066461EC9D0EAE70344407C2D0C0511448D0D60F090891D4090A4210A461"))
+            (property INITVAL_0F
+              (string "0x0A80109000020090042008A200220104216004090045410092008050940803090054090221412669"))
+            (property INITVAL_0E
+              (string "0x088501AA50014C1090160009402A2D0A00B020A1010100400A1000502CC402CA00C6250A04005601"))
+            (property INITVAL_0D
+              (string "0x00A2A0ACA00808815A540A80500842002230022000AA80702006A570AA4216CBD0ECD514A5504256"))
+            (property INITVAL_0C
+              (string "0x16CAD1580000204148010448100000050060001205044008660680008440040000004100CD402010"))
+            (property INITVAL_0B
+              (string "0x004040A8A4154821060600CDC0560201C80000040A0A0000001300414268010010580210A1900882"))
+            (property INITVAL_0A
+              (string "0x1143410A541103911444110A502C56016110001204C141526A00041028D212400052581808014243"))
+            (property INITVAL_09
+              (string "0x000000008208262154A4112510500015C8C09A52124810440A0404000001044400824A152450A80A"))
+            (property INITVAL_08
+              (string "0x08850084A81502A128321840200000042510540A154801205205A4212C4004020000000201400000"))
+            (property INITVAL_07
+              (string "0x0081000000142900B0010A44D0989300008000040141012240004810009000C0408212114CA05224"))
+            (property INITVAL_06
+              (string "0x10401022481200A1108A0020002C150AA2202A941A0540868C0820D0120A100301109000A1204080"))
+            (property INITVAL_05
+              (string "0x000000000804400000A00100A02042188020508508C93160A1002020048802881024D102A5205852"))
+            (property INITVAL_04
+              (string "0x04010050B50920A06C64080A30A41A028150282908809050420A829048C6042511128812C341FEFF"))
+            (property INITVAL_03
+              (string "0x0884912C4A16008000950A88400845000000C008030941A09008C0A0165800002026000008204A00"))
+            (property INITVAL_02
+              (string "0x0049100061088C002240150920404000040042100480000000028000964000001000000200202009"))
+            (property INITVAL_01
+              (string "0x004080521508241020000144905419040D10122512652154D2006090489F00C1000048004D20049A"))
+            (property INITVAL_00
+              (string "0x0AA00080080886102CA60280604C35008000242108E0A1FEFF0848403406004AA182240408214005"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b000"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "1"))
+            (property DATA_WIDTH_A
+              (string "1")))
+          (instance ROM41C_0_1_13
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x0C400050020682F1FE711FCB60A6FF10A000042F0509E14200020FA15A90010941FEFD1BE811ACFC"))
+            (property INITVAL_1E
+              (string "0x1F8FE002A11FC390A8A90FA7F15EFF1CEFC0FC9A13E800000000C00000150AE0C05832010381AA72"))
+            (property INITVAL_1D
+              (string "0x08800056FE0A8CD0FEED1EA9F1609705CFD1849F1345A02E940020507A0014070000C90402015880"))
+            (property INITVAL_1C
+              (string "0x00291000040E4C51108400C001A20900804140801BA201063C1226C0D611084911B0C710000096A0"))
+            (property INITVAL_1B
+              (string "0x082A203EA71A0430FEF81F876186731F2FB1F4BE07EFC11EDE13CEF1FEF70CCF31FEFD1F40F00804"))
+            (property INITVAL_1A
+              (string "0x00200020000400102A5516000062171AE5F1E4FC0FEF31B0CB176EE05E1B1F6F71FE89186FE1BCDA"))
+            (property INITVAL_19
+              (string "0x1CE7B1DEFE042B00245E19AF400004188B0030130503F1EAFB1EE7E1D6D410227128CD0FEFF1FEFF"))
+            (property INITVAL_18
+              (string "0x1DEDB1FEA71E6F71FEF71CC7F06EDE1E6D90FEFD17EFB1BE2B1C6EE0EEDC1FE8F1EAB717CF6072CF"))
+            (property INITVAL_17
+              (string "0x002250B84E0AA7F1B6671446F0AAB41404C0141F0821808C8011011050ED09CA20042200C1819E7F"))
+            (property INITVAL_16
+              (string "0x14E3409240020010EC001228100000006D6132BB1FAF91440C0C0840EEB10428106A4901AAB18279"))
+            (property INITVAL_15
+              (string "0x190F80A07F1A06B1BEF71C64D1A0F901C021C84018A3902A771DC8E01C020C26B158C114A10148CD"))
+            (property INITVAL_14
+              (string "0x0B0810420007496048C5110D80F0A9006430024E0DC250DA93192BB0144903EDF09C090040011ED0"))
+            (property INITVAL_13
+              (string "0x0C2591505A02EA20A4270946E1182907A411C85C028190086400A0F0104F00E5C1A2120B26110C19"))
+            (property INITVAL_12
+              (string "0x0448300C180C2A60D0A10D220160B7068AA140B019E6D0BADA1D66A186E0174CA06C240A855048C4"))
+            (property INITVAL_11
+              (string "0x04A0C0EA1C00614000F0120320CE15038630C8FB19E2904EC207ECA00C280268D094210962301A93"))
+            (property INITVAL_10
+              (string "0x0465512E481048305C930A84906065138590CC8801C9C0E6861182405645004001C2080C04102652"))
+            (property INITVAL_0F
+              (string "0x1CEC0002FD020070C2400DAA00044D0B0820040100482100C30A40006C80018800423D13ADC19228"))
+            (property INITVAL_0E
+              (string "0x02C2009204002600E22D08A34000040E0411E81901EFF0CA100000002CC40E4811E6FD0544000290"))
+            (property INITVAL_0D
+              (string "0x0082408489112C810A50100020000C0026B03A400708A02C2B12A50082D202899048941500212474"))
+            (property INITVAL_0C
+              (string "0x14885048A017CA001280000611000817291050590FC670A8520485508EE600C1C03CC9094D400019"))
+            (property INITVAL_0B
+              (string "0x0480D0401400A80082E71044F0B4B212AE61189110A3E126771A87D0723D0001210E9214A1F1F2A3"))
+            (property INITVAL_0A
+              (string "0x13C1E1FEFD12AE0194E41F0E7006DF182A11F0C811EB61DEEF136EF1F8F21F4440884A0E2C813A41"))
+            (property INITVAL_09
+              (string "0x110630364408C221F4B711E5715403008851BEFF1FEE714E7B040050EC471EE5109ECA15E450B82A"))
+            (property INITVAL_08
+              (string "0x1BC08098191E480090840803A08028062591F66A1548713254152631F8F80A035094351FADE064F7"))
+            (property INITVAL_07
+              (string "0x0001C028030108001C30000EC08A12000A00F67C0F49116E4118200002040460107004000520C4F4"))
+            (property INITVAL_06
+              (string "0x0663207A961FA531265E0728A06634022A0004CA0E47E184400C204052C71C00A10A920DAFB168DD"))
+            (property INITVAL_05
+              (string "0x1FEBF1B60804C5000C460901F072F01401F00808064C912C0110203000600280E19058186091003A"))
+            (property INITVAL_04
+              (string "0x02E9110E151C0E00C83C0E0FB126D213E2713C401BE6C0884900C21040750400A1D2A70445D0FEFF"))
+            (property INITVAL_03
+              (string "0x130110968A0201000200004461004000000040080908208081004031820C0AE4E1B6B61DAF204A65"))
+            (property INITVAL_02
+              (string "0x1F0D912AD815EEB07A770163B0A2090824C0C262084000823412CA11800000002182200B8CB04210"))
+            (property INITVAL_01
+              (string "0x0080C0D0410E6E71E8200042802A2C05040010201029011450022090489F00C3010068088750648A"))
+            (property INITVAL_00
+              (string "0x00A08020480A06108C2202A130441110800002250E4990FEFF1000809E120FA55088E01128A1441A"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b000"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "1"))
+            (property DATA_WIDTH_A
+              (string "1")))
+          (instance ROM41C_0_2_12
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x0943109A47164491E4DB1486918EF61A610004BF12C3D152A10943F152490300E0F24D1A81319EB4"))
+            (property INITVAL_1E
+              (string "0x1DE6E042B517AB60564D1766F0DADF1CE7C1FA790968B0B4B50B220004BF1FE1A17CBB048B517A76"))
+            (property INITVAL_1D
+              (string "0x098881284A0EABD07CE90E6770F86F1FA7D1EA4B0D04A136141264D0200505852004DA0F221058AD"))
+            (property INITVAL_1C
+              (string "0x022790FA290E8B511A441042213200118890C0B60B22600C9A120E01C67D03EE31D87A094A1006A0"))
+            (property INITVAL_1B
+              (string "0x02262162651622A1F4A71FCED06EB606ED913E1F1F6E804E7B0226A1CEA7028B11FE6A1542A1140A"))
+            (property INITVAL_1A
+              (string "0x00480050000600017EF81C0000C2CE16A5F1E0D81DCE204AC61FC8D03CB60AA0B14E4217EBA0EAAA"))
+            (property INITVAL_19
+              (string "0x1CE431A00F1FE7F1DAAA17EF1000061E8EC1E65A144AE16A6912EF61DC8E0F225128CD0564312C63"))
+            (property INITVAL_18
+              (string "0x156AF1E44E12EEC1DEEB08AE9166D60625B0D2951361F17A241766E04EDB1EEA70E89716C6F1709D"))
+            (property INITVAL_17
+              (string "0x002EF1BE4E1B456174A41C0E40FAB61664314A9F12A0714E030EE9502E6B09C930D08B1440808A7F"))
+            (property INITVAL_16
+              (string "0x11C280BA4A124321DA4A092F504205022D4052B70DAB90561E0C8A40CAAB1626C1681D11EA20804A"))
+            (property INITVAL_15
+              (string "0x09A28160361A45E1EA7F06CAD076E10FE71156D5154EC06C2213C2E0FE700F6A11DC280CC321C805"))
+            (property INITVAL_14
+              (string "0x0B08105424054961A46604CDD004CF0DEC113C3B01A0209E8F048610D8CE0E2570D8290C44513A16"))
+            (property INITVAL_13
+              (string "0x01A2B1204A15AA90C4B6102170EC181063F0F27804EC51965D052A010C2F0CE1E14C4A0BA4502E51"))
+            (property INITVAL_12
+              (string "0x04C5A16C550AAEC1F080190E40884E0101C0842A148D9120810ECB510CB00400A1949618C6D0386D"))
+            (property INITVAL_11
+              (string "0x1240D0F00104894060EE092A919EBB090A11E2A61D03101A0613C890D8600FA1F1EA0F0346F16C82"))
+            (property INITVAL_10
+              (string "0x104A31942A0C28212C20166090D2631141808268088800A417040AA0E04A11611032090422006482"))
+            (property INITVAL_0F
+              (string "0x18E931A68C000161D2280C095052CE136AD082301962E1B0D21AA4B144DA02A6000A48088050FC52"))
+            (property INITVAL_0E
+              (string "0x194A31746403A2415A1F19A7A0DC08050561FA7812EFE0EAB11842B024401CE27132DC08CA81B2D7"))
+            (property INITVAL_0D
+              (string "0x0025C02A0B0BAC0056E11701B01818124D9168A00CCEF08C0B19C861220819A260D6690ACE11DC3F"))
+            (property INITVAL_0C
+              (string "0x1DE2B0841513A8D1EAD11C2E1114D908A5D0F05B0ECAF0CC1D0A44500C0E0A8BE0FAA81D8000C841"))
+            (property INITVAL_0B
+              (string "0x0464B0DC4F1FCE40E0FB198330F47913EEF19C5114E7D0F20D0B4B9030630A457196880864E1EA35"))
+            (property INITVAL_0A
+              (string "0x0CEEB1F6B90FADF0422B1EA3B1FEB917CDA1F8CA1566B0F09510EDA05E3D0DED5018230E2CB03AE0"))
+            (property INITVAL_09
+              (string "0x128C60662A08A910BEDB072AC0AC821B6CB166A7154EE138E410085020D0054B507CA10FEB01769F"))
+            (property INITVAL_08
+              (string "0x06229052F30525305C9D0447C0CA01020A21A6E41BE0F1B61816C890D2B81EA4014E720DA8211EFE"))
+            (property INITVAL_07
+              (string "0x0080800602090E116C3319CE016CCB140A80FEFA1EE8B0FCE118A120AAEC04A8D1FAB506813084EF"))
+            (property INITVAL_06
+              (string "0x0F03205E47148F9024490F2EA148A218A1205ED20127E06ADC194D30C810124BA0DA231B6EF1FADF"))
+            (property INITVAL_05
+              (string "0x1FEFF1F60C1BA450DE0609835032A419A3C1EA02176E805CDE1408010A7201E811FAC61FC9D1FEB2"))
+            (property INITVAL_04
+              (string "0x09A4F1BC731B4F61A4F8090F01828819C6219C7E1F6671BCAD1761803275016B70C07E0182C00000"))
+            (property INITVAL_03
+              (string "0x028420AAA90148A042FD17C6A03C3B0365412A500BAEB10A711CA1B1F8A2012E5188D31EAA906EF7"))
+            (property INITVAL_02
+              (string "0x1F67D1AE990D63B050F702CA91EA011622D0A6F70940908625064A118A3F0800306A640B04F14251"))
+            (property INITVAL_01
+              (string "0x0564308869076A61EA761628F024A617A2215C3C1F09C02A3C0ACC412440000A21345C0667507267"))
+            (property INITVAL_00
+              (string "0x16C081A045068141A05C15E5506E3418C4D0A200172B0100000A4561905104EF9028D511A050AC1E"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b000"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "1"))
+            (property DATA_WIDTH_A
+              (string "1")))
+          (instance ROM41C_0_3_11
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x0587313EA50406F1849B1784A08EF21A4500049F1343B154820726F1FA4A02C3F1DEEF1FE9B1ECB6"))
+            (property INITVAL_1E
+              (string "0x1C0F70A8F0144B11B41E1CEFF1FCFB1FCA41FEBD1DEEF0F4F50F020004A40AE1A13C050387C19005"))
+            (property INITVAL_1D
+              (string "0x18A140BE4B0DA8F17EFB1FE111EA7D02A700527F0746E07E9C002A51AA640D4F40A2CB0206005AA4"))
+            (property INITVAL_1C
+              (string "0x028AD0020C0E88C11E74154291F80A148A50C8B504A2611C9918438042101348D19A6A0000509050"))
+            (property INITVAL_1B
+              (string "0x0AE3E142FF0B4631B6FD1F66E0D6871F2DD150FB050F81287B1E6F403EE51C6FD1FAD20BC5F11C0E"))
+            (property INITVAL_1A
+              (string "0x00680070000600116A45060000E29F11C6F1FED91DECE07AFF1348F0F8BF0EA2916A7508E9F0B8B3"))
+            (property INITVAL_19
+              (string "0x0FE790BEEE092340E8B8184350000619862028561D4371AA450C6680FEB5056F70FA3D0FAEE1BC5B"))
+            (property INITVAL_18
+              (string "0x1487F02A9612ECE0FEE7198691BEF50DE7B1F491170EF1F6F817E5D1E0F81D4FB1FEDE19EE01EEDF"))
+            (property INITVAL_17
+              (string "0x07E3A1646C1DE46076DF1AA971DEE31682814C5F16A531E88314ED1034EB0DEBA03EFF1E052056F5"))
+            (property INITVAL_16
+              (string "0x04E860BE731CA441FAFF016840FE951B6D715AA415EBB086B30D0EE0EEB31BA7013C171DCFA08659"))
+            (property INITVAL_15
+              (string "0x188E80784D076560460F1EAEF18A991E47612C6613CCE008441FCCC0E4761E41A0EC9A0AC0002A04"))
+            (property INITVAL_14
+              (string "0x0B2FF140990549E0EC36010DF05E8E010DB1EC6E0304A03CD81ECDE0D09D01E8805429014FF1A22B"))
+            (property INITVAL_13
+              (string "0x0F89F01664192AD0568C05A6209E511AAB616AEB19C4E06E581E6F011C4906E2C110881E66F1EAF7"))
+            (property INITVAL_12
+              (string "0x1FEBF0EADB1DAD30D0E20F47504227004091586018A4713C440E6A01BE690F23A0968E1B84402864"))
+            (property INITVAL_11
+              (string "0x1A0310E40E188980B8900863007A3A04E9408428140EA1E26B1788008633022A90462311820020AE"))
+            (property INITVAL_10
+              (string "0x1FC831D22A088BE1441008028120611903816203108840EC00014AC0C45B0D4CB0A6880241200000"))
+            (property INITVAL_0F
+              (string "0x006F50C6FD000841109C01A3F1DA7A19EDF1FAD315AAB1FEEF192571BC7D19E5000EFE198CD14C3F"))
+            (property INITVAL_0E
+              (string "0x17E5D154BF1E4D409C0319C7F1D20B03A6E01CE01E00813EA11FEF71E44E1E2571023904CEF17257"))
+            (property INITVAL_0D
+              (string "0x1CC1A19E5317E4C13EB81FEF41283C1DCBA1F8DF1E6E7162D4076E01F298012EA03ABA0ECE11DC7B"))
+            (property INITVAL_0C
+              (string "0x0B21A0E65B0443719CF1042160349F0DCF80B2CB12CAA06EF918695172B80D2F20FAA0158540C8EF"))
+            (property INITVAL_0B
+              (string "0x046E50685E15A680C60C0F0651804B13E780FEF31FEC10D47E124CA132160B4541F68818A5001816"))
+            (property INITVAL_0A
+              (string "0x10C4A008500FA56146290EA22056541AA6B13CDD1DC5C0EC5013EF71C8151408B178B5110040BCBF"))
+            (property INITVAL_09
+              (string "0x1FEFF1FC7301EBC0B6A01103D0BCA61A623168E91186C0548E1DEC313092050A507CE319E711FE81"))
+            (property INITVAL_08
+              (string "0x0EA7F1D2B71D6AA18ECB1FE591DED4040771B0B11BECB0F6F91A2DD0F2B813E951DEC71024017A0F"))
+            (property INITVAL_07
+              (string "0x0080607E7E0705E172CE1F25807C9F1D8280EC8710E0F092F9018AF1DE2D002D10FEFF018711846F"))
+            (property INITVAL_06
+              (string "0x0360001ED309AA01062308404162A715A15072651769413EB00341A05818020BF038631FEEF1FA5F"))
+            (property INITVAL_05
+              (string "0x0F84F0664F0669D092B110C3605A3A01A2514CC41CE88072A0078241C2CC1BC941B4C70AE4612E7C"))
+            (property INITVAL_04
+              (string "0x1F468110960B6201284711E2B0B4530A6440207C178190F2360224903CD616A140400802C04144AD"))
+            (property INITVAL_03
+              (string "0x1D45707CF110E6F1FE6C0EC6C10AEE0D8EF0DCE700EFF112E71E6E71C6501FEAD1DAF71FABD0B4F2"))
+            (property INITVAL_02
+              (string "0x00EA60823E0F21B148D7008940DED11F4611B6CD158C90C67D168A118E00082D31705701CE61A07B"))
+            (property INITVAL_01
+              (string "0x0E2EF0184C094F106CD90EEEE000BA168E31FEB80A21F018BD08EF71BE60074FB024860F640112EF"))
+            (property INITVAL_00
+              (string "0x1346917E771201E08049196F30C4190E64901284070301ACC703C13184FD0846717E2D1CEC71F2D0"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b000"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "1"))
+            (property DATA_WIDTH_A
+              (string "1")))
+          (instance ROM41C_0_4_10
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x03E691568D196D60500E01A0D108090A23F1F8D509005044001224A0B6B018E311548A068FE0725A"))
+            (property INITVAL_1E
+              (string "0x00E91000640960102028020901242C030931008A1180F0F6F71F6BF1FCEA1584C1A8800823915E01"))
+            (property INITVAL_1D
+              (string "0x1C84001E25052731849A05CF119218012060408C086D80228A0548B03CD004028048D71829C0247F"))
+            (property INITVAL_1C
+              (string "0x12C6E0FACC0E67A04E9B0A25302CBE0965F03C601AC9F1A22500681010650CA3406285110820A688"))
+            (property INITVAL_1B
+              (string "0x0344C048C20708B092590088B0888C00C770DE2103814020010C2C401E491DC5B1F2811BA441FEFF"))
+            (property INITVAL_1A
+              (string "0x1FCFF1DEFF03EFE1F4EF19EFF182130502001AB50028C17E0009A1E042640480C0B0D303E4619021"))
+            (property INITVAL_19
+              (string "0x03200040101F4470CAD40E4051FEFA0124814260190D10BCA31E0C812A0F096FB09826098C407009"))
+            (property INITVAL_18
+              (string "0x018A40EA490582B0202E116921907D0DCA612001050C4146D60BADD18E231807A1D44A0820F1EE7A"))
+            (property INITVAL_17
+              (string "0x02E8A1483115E8108A9B0A0531542B0AC8715EE01E8A7172FF0FEE60EE940627C0388A1C042156DD"))
+            (property INITVAL_16
+              (string "0x0F4170AEB11DCEF124FF0F476066C01968802C171FCA218A93134790105509C20014230E25417684"))
+            (property INITVAL_15
+              (string "0x1D4F5094CD056E604608038B217A5C004001EC780EC701E870014F00160318E7F196FF182F202402"))
+            (property INITVAL_14
+              (string "0x0002A1BCF4074490243908E27140C61A64E026FF0EA2B1E61F06814086460E0CE0CCAD0986E10260"))
+            (property INITVAL_13
+              (string "0x012321B2FB03C8804A070F2B312463032D30B0A208810028520EA7010C41102C5040BA1F6FF1FEF4"))
+            (property INITVAL_12
+              (string "0x0BEBF0FCFA1D667106E51769618CD0076FE142860262408A531D8CE0FC42178A51423905C1A1C29A"))
+            (property INITVAL_11
+              (string "0x018911E043034680741915C1A080C10204A1066D128180B213080B10C8B5196800D20109A3009460"))
+            (property INITVAL_10
+              (string "0x080701089C01E00060211908504A3612A49068C8044CC15E58160B510AE40186410E800000000000"))
+            (property INITVAL_0F
+              (string "0x03E34044731B835008FF0BE6F1DC3708E4C1E8D403C1D17E3C1D6511A2751468006C4B066771C80F"))
+            (property INITVAL_0E
+              (string "0x112251FAF10E2CF08041174D51B843020A2004220E00A11CE90CE710366D1806F01A1F04ADF1182E"))
+            (property INITVAL_0D
+              (string "0x01E7C19C4F1B8FB13A4807E73056911DE0F0465B09E11130C4022620CE280A8D804CC314AFA0DAE4"))
+            (property INITVAL_0C
+              (string "0x14C1D12A5B1FCFB1987709A160FEF70C06F1BEA413EBA17ACA1F29D1C4581D2E31C21206AEE0D8F0"))
+            (property INITVAL_0B
+              (string "0x0B0F213A2C14439058080D0680085A042680CE660E4DD0DCFA156C4034CA1FEDC0C68F10645000DF"))
+            (property INITVAL_0A
+              (string "0x0CEBB1084A170E907C2B0E23A1AE341D6D712C2208C4215C4102A111069C09ACB164391BC941FC5D"))
+            (property INITVAL_09
+              (string "0x1AC9414AB20C20C1B8F70989C0F4A0130501A0F901CF9170C61B6D80CCD8010951BEFE1AEDF07ADC"))
+            (property INITVAL_08
+              (string "0x0E2B7140A605A6A01834038E214E95058B613ED2114BC01CC0184DB0B46717EB717AFF104411DA09"))
+            (property INITVAL_07
+              (string "0x01ECD1162000C1606E8A1E85308A250DE5F11AF91E0261625E0206F0DEAE1B2F20FAFF08E1C14E88"))
+            (property INITVAL_06
+              (string "0x01E8811C3110CA608A8A18A311008F1E4660F0D81A27B1BE7A1B0D70B412134AC184AB1F6EF1FEC2"))
+            (property INITVAL_05
+              (string "0x008400421104CF71F2E2130A20CC1805A681C41A1D02D080000060A19AD11A2320223706AB601209"))
+            (property INITVAL_04
+              (string "0x1FC500FA590BE5D11AE10960E0EE740CEDD0C2EA1B0DB032561EAB709E8C0EEF602E181DEE301698"))
+            (property INITVAL_03
+              (string "0x10EEE084C618E6B0ECAC0323D182C6058EF01CEB106150C0A60F6E50C24805CBB06CCD0F49C0D812"))
+            (property INITVAL_02
+              (string "0x002240B25D0A8D408C58154A90FC42178870121513A3F11C931DA520CCC00BEF1070D316EB419C12"))
+            (property INITVAL_01
+              (string "0x060EB0209E13E99034580DCD900CA308CB30E64400273086160DA571F66003A9E0BE0B1C4881B0BA"))
+            (property INITVAL_00
+              (string "0x1887018A931D2AF1480C1A0E8172C40187F158EE08AE31C85309083134E510EDB1F2E00EC76056E4"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b000"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "1"))
+            (property DATA_WIDTH_A
+              (string "1")))
+          (instance ROM41C_0_5_9
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x0049F002DD09C1B1FE710E6A207EEC15AC0002200DCC20EC550AC20146250C2F0036F109800008D7"))
+            (property INITVAL_1E
+              (string "0x178FA17A8D1BE94080A00F264052E61CA7C00C9001C941484804C40002110A4E914ABC1F6FB0AED8"))
+            (property INITVAL_1D
+              (string "0x064AE1423B18ECD01AE514E1603E9E10C870848D1EE8B080FB0ECDA07EDA06A3E1FCF61D6DE1EE7B"))
+            (property INITVAL_1C
+              (string "0x1DE9E104B31F24F1B0BB0FA7F08CB70F67B13E6A04E831E000008000088000000004000401002208"))
+            (property INITVAL_1B
+              (string "0x0FCF90AE391EA1A0689E1DAA61FC431A2FB0B4341CE5E0DE4C0180816AF5068E90D47D1A8EF00000"))
+            (property INITVAL_1A
+              (string "0x00200000000C0010205500000068601A2DA1C4FB060A1190FA1766410C091F4F31BEBE1846803ECC"))
+            (property INITVAL_19
+              (string "0x106E404C0B0088813403000CE000010C49F19CFD0BACF09E711F83F146C01A8BB1FE721A27F15E33"))
+            (property INITVAL_18
+              (string "0x0B2081EE2508442196B91C87406E801C6D807E320EC7312A23100040CED00AEAC02AA512CF602288"))
+            (property INITVAL_17
+              (string "0x0C6BA1725F1F6FF0BCF61B0461F22B080DC0B46F056BA0B8F10007A190F11EEDC11C4513C391AE1F"))
+            (property INITVAL_16
+              (string "0x1A4591EA84194AB1C86A1888A1C2CA0CEB803CCA0D6BF12EF316E970BCCF04C3C0FC7906AF50EEB8"))
+            (property INITVAL_15
+              (string "0x1E0AE0269A0C8C51547700615104E3006001F6401E2C01EE801E6800100002000120001200712402"))
+            (property INITVAL_14
+              (string "0x1EEFF194A10FEB617A3B062F01928F0EC9D02C481FC5B106621CA5B066E8114771A6CF1BAC705C14"))
+            (property INITVAL_13
+              (string "0x0F64C0068B1E2191AAFA082CB1D47D03C13040F61000004870140370984014207020010A2C503A57"))
+            (property INITVAL_12
+              (string "0x1EC1A17A740864101E38098780582000E0006000080801D4000028404C7C1D83C10E05064211A002"))
+            (property INITVAL_11
+              (string "0x140FE1F00200AF01061C08C180024000028062201E200052701F8F01C6830800004210000110A004"))
+            (property INITVAL_10
+              (string "0x07800000800307C0240001000020100880400048002471D27F0F63F11CE212A740E8000E0701E000"))
+            (property INITVAL_0F
+              (string "0x1262B12E8F1FEE80EAE0178C40B45208C280044D0340901A4506CBA01A681AC20072D71DEEE1AEC4"))
+            (property INITVAL_0E
+              (string "0x0DEA80D28A07A7F0524B1C264014CA1E4B4166430166814C021869A1DA3A19CD3068EA1DC040ACA3"))
+            (property INITVAL_0D
+              (string "0x1FC8D1F87317E370F05E0200A1EABD002440FC601F0991BADF08A6E0FEAF1A86C1CCD21009A10CC4"))
+            (property INITVAL_0C
+              (string "0x14CFD070A10DCE105A4C078AB1D2B01343F1A4A802C27150BA0D8BF176F1108CF07C9304CC015E7E"))
+            (property INITVAL_0B
+              (string "0x1F4710A2390E20D080E51CCD706A8E14AFA1FC210CC7D19EDC048730EEF01CC3313670078A5156E0"))
+            (property INITVAL_0A
+              (string "0x13C6618A5200EFA180B40A4C605E4F12CB017E5C0B48611A8A1E220170E21B429134460DC701F00D"))
+            (property INITVAL_09
+              (string "0x1EEFF1FAD51F2240F403008071027C02CA911ECD17CA0086190E23A132251EA1B0088005A0009028"))
+            (property INITVAL_08
+              (string "0x13C4513059168DD0521409A100BAF01EC4C1E01A04082020951DA311DCB01A2BE13A7A1CC7F02A6E"))
+            (property INITVAL_07
+              (string "0x03E7F1F2DC0BC2A05CE91C6B30823206E7E16CFC1F43300C0E1B24418E9B1AAAE168261AE1E0AC31"))
+            (property INITVAL_06
+              (string "0x058DD1FEB51F46E0CAF4008B61BCCC15EE518C421CA2F136530483E16EBD04A6A0346E13CAD1F0AF"))
+            (property INITVAL_05
+              (string "0x0FAFF1D8F2008341B46D166FD0DC8D02E630A671008940E2C11847D0F40D1C8AC1F8B805C781D8BD"))
+            (property INITVAL_04
+              (string "0x112001842C048320FA3A062C605E6D07CD81D29112A84018481008A1C25E18481126A0084BA0DC76"))
+            (property INITVAL_03
+              (string "0x146E809A4E1A4260469B146630C8C61904514861172991C43B00E19078AD17AB81B8FE0647C1180A"))
+            (property INITVAL_02
+              (string "0x0D67C1D01C0FE5D0E44A110F90E23E03E571980F16240170EF1F6FE0D2C017C2D036D917EBD1BC85"))
+            (property INITVAL_01
+              (string "0x1C07D1228211ABB1BCD005C1811A450865406040026B5190521DC5F1BE750DEED16EA30006B09C01"))
+            (property INITVAL_00
+              (string "0x0A8B61FEB11AEE60A0AD12A751C8A3118DB134FE02609108211C02009A52034080A8C206E7200064"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b000"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "1"))
+            (property DATA_WIDTH_A
+              (string "1")))
+          (instance ROM41C_0_6_8
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x1724510435148A31921A130B11CED811AE10EE7815C07198571AAE0034271F444034921508F05E47"))
+            (property INITVAL_1E
+              (string "0x1E6611FAB90121C008F50F6560DEA71D85E1E0FC030161FE7916C6E086561BEE30F2BD164C21FA4E"))
+            (property INITVAL_1D
+              (string "0x1A6EA14AB31BCBE142121BAED1F49011E6D0603C1A4E908AE30B85302A9A07E2A1D624114941FC5A"))
+            (property INITVAL_1C
+              (string "0x166E71FED2102971FC9F0BA5C0DEA41E272094411A84D0400000000000000000000000000000E260"))
+            (property INITVAL_1B
+              (string "0x0C8F60DC730AED00F2CC152011DCE9186830CE931B4120BCF704AC21145107C510CEFC11AA50E2FF"))
+            (property INITVAL_1A
+              (string "0x13C9C18C3B0E8DD1B8390CCA90F8E31968E1C8B607C850D2A61EA201284F14AD70866709EF8094F4"))
+            (property INITVAL_19
+              (string "0x094FE01E2F0B8AB1529F13C071F4EF1DE7F0DE9D0961D0940D07EB51FA7812E7D07C1B15AFC13486"))
+            (property INITVAL_18
+              (string "0x162680B0F717E141B6C2166D11F2670AC2F1AEFE1F2B50DA4F0385A1AE4F074F01B44A19EFB0D635"))
+            (property INITVAL_17
+              (string "0x09870064DB0A2B801C391388B1ACB50F8BF0F8A60AC9B156761EEAF1CEB91A46E120A9058731749F"))
+            (property INITVAL_16
+              (string "0x0009F1267904C670009806E7715423162ED054EF0E871120E519218058AC0B60B1F0E21BCC91BE2D"))
+            (property INITVAL_15
+              (string "0x104190863B0188D0F4CF132D31C4D7002031023F0023F00A770167B0160304E0314E03106071E6F3"))
+            (property INITVAL_14
+              (string "0x1F6320E8440C4660DA1E1B6A61561B1662215CA01143F0864F04AA21FACF1FA650D6C113E490E891"))
+            (property INITVAL_13
+              (string "0x05A4E198031DC5B1D402102FC0047E1C00F1F81C00038080EB034E70080014086010030183010400"))
+            (property INITVAL_12
+              (string "0x1208100609068030183E0200B0361800C0C062140A2C50A8420000C040B80901F004060040100000"))
+            (property INITVAL_11
+              (string "0x1206E00007022021020900C0C042010083002C080C008060480004014402100A00C0010103100006"))
+            (property INITVAL_10
+              (string "0x014191800503056040080C000008300020806008042830002018603012811A2B8070030060300603"))
+            (property INITVAL_0F
+              (string "0x0107D0DEFE046801D694144A811AA700013158A007A0014C4F02475088090DC10006861328C00E61"))
+            (property INITVAL_0E
+              (string "0x0765014E1D084F20DE9B07C8B0022C0DE0A140A818E5717862188951C0931689A1729408A32052C7"))
+            (property INITVAL_0D
+              (string "0x000030209E064440427000EC5184400F241002B200A20052800485401280106940B4700001506862"))
+            (property INITVAL_0C
+              (string "0x030201820A05AA4026280241D1688E022D10BA0A17A7702A311E22319A600764C1FC101029C1608B"))
+            (property INITVAL_0B
+              (string "0x1E4DF120880168A08AF5198BF12493126EE08006084DC022111949E1305C19EF415E2D02C6D0A409"))
+            (property INITVAL_0A
+              (string "0x150B501CE80DC2D1682F13C8D0A8EE0D6D61F03A13012180A70C24102A6E0A88A01A1C16EC512E70"))
+            (property INITVAL_09
+              (string "0x1BA001805919A48148F308E1A000FE050F001C191AED815A5C0B67D0DE2802616130341E2BA0CAD2"))
+            (property INITVAL_08
+              (string "0x0D4D60B49C0208A12AA01227812051176651FA50044BF124C118A910F0B212C39002B11A0B21F0FF"))
+            (property INITVAL_07
+              (string "0x03A3A086CA1429008E7D0963E048850F6DA0F6790E28501C37104ED0F0890F4570880A0508014810"))
+            (property INITVAL_06
+              (string "0x044150C0C50D062150E41508504815110B10229A098BE146DC1407B080FD17EFC01EE4118370F2EA"))
+            (property INITVAL_05
+              (string "0x0F21F104C3012D2080A611441174DA0068B010C008EC21902317A110C08E06C59094590065214074"))
+            (property INITVAL_04
+              (string "0x04C0810420042630005305CE1010D91B43119A2812A1500A520000410C000280115AA00001411408"))
+            (property INITVAL_03
+              (string "0x022C00867014C400C8D50A89206A00118EE0989A1B4121321D0B0AE114570A2C617200142E11B6CB"))
+            (property INITVAL_02
+              (string "0x1D4A50FA5901E47052A00046F1342F02A5006499140081829C12A570949B0FEF409E261D2191AEE3"))
+            (property INITVAL_01
+              (string "0x1048C05AD207C6908E6A0D00512208068D509014136C9044131C00414C4C08404166651F02502241"))
+            (property INITVAL_00
+              (string "0x0B6DA06CDB0760D1C4E0050CB136D71CEA91FC4E1004A0F6ED0100418AE01F0000F0C01A4B9174F0"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b000"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "1"))
+            (property DATA_WIDTH_A
+              (string "1")))
+          (instance ROM41C_0_7_7
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x17CA61AC900161F1B8100F22A1FEEA0D2140E041094500E200146D41E66818E09186E60DE781EE65"))
+            (property INITVAL_1E
+              (string "0x12A43000C40D0A215A021F2CF074BF1FC1406A110589010C8C086D015EE01C0C80040200835094D1"))
+            (property INITVAL_1D
+              (string "0x140440DA621D2DA1F2F3092A4048060887309A0816E8F1DA9A010A21AC740C425022C20A84904A31"))
+            (property INITVAL_1C
+              (string "0x050E80FCA01F87411212140A1088520048903878142C202000000000000000000000000000004808"))
+            (property INITVAL_1B
+              (string "0x0942D1C807130CA026EA020DB1AE7F1EE1614C840CC541780A1E409178C1154CD0D6581A85C1E8F4"))
+            (property INITVAL_1A
+              (string "0x138A81BC110D04A0EE18102051402005CEC1FA2801E5E0FE421A285004001E0990C81B078B003215"))
+            (property INITVAL_19
+              (string "0x07AF402E3A1B4670CAF51602E0B8491B400000300B8F519CE0054A41BE2B0CEE21A66C186040B496"))
+            (property INITVAL_18
+              (string "0x1209A1F6DD128CA1965913ED80B0B10987816C0E05213132FA07A11120770C27105CCE0CA7108C08"))
+            (property INITVAL_17
+              (string "0x0E600006780A66203CA41941C0E29C1125F1D68B01E0D1CE5203E961825102C8014C741BC7B1FEA0"))
+            (property INITVAL_16
+              (string "0x128E10CE1D18001102AD1BA381E0CC0AE7D08488080250064206EC70CAE21D8FC11C960C67C0C49B"))
+            (property INITVAL_15
+              (string "0x07A9E17C99082550540700235158D11100000800008000000000000000001B8040B8040E00400008"))
+            (property INITVAL_14
+              (string "0x18EE9014AC08E9B14A0207C7112CDF11A7E04EC01F40B060490B4C51C0401C0601A60F1F2A314ED3"))
+            (property INITVAL_13
+              (string "0x0124E1DEF4020490F2B506C000007E1FEE0180F21A20A174301A05F014620648B042310284100A17"))
+            (property INITVAL_12
+              (string "0x1E20200A1408244028400DC5004023116100AC281440E110850C494164251D8B81940B010220940A"))
+            (property INITVAL_11
+              (string "0x124101E60D0444803232054200E45219C5A0C81016492080900B8B1188930820410E321284209C24"))
+            (property INITVAL_10
+              (string "0x0A02908610078D808830100E40704119410082A0186481D20F1303812CE30C8EC088900000000000"))
+            (property INITVAL_0F
+              (string "0x0062F12AFC08A8802E89144860A05016C400A0CE0804D02AE2004E30C026108C0066140001018225"))
+            (property INITVAL_0E
+              (string "0x00C0E0A8131F05108E011A6E11986009E271B47407668144600D2D31C01B1A01B0C2090361513A04"))
+            (property INITVAL_0D
+              (string "0x1C809188170F4041108002A71124FC05E800F80D1EA6C11ADF0147101042040930244C120CC11E1B"))
+            (property INITVAL_0C
+              (string "0x12488008F8018920005802C7B11019024BE000BE02A38018B8004AC1F8D40486C07CE401AA016A32"))
+            (property INITVAL_0B
+              (string "0x1D6230A2F31A0540A0330AC59110C11000709A410C89D1221C1802601288052F41507D0FC6D1E621"))
+            (property INITVAL_0A
+              (string "0x178970B86010AE00EADF0C6CE082621C08A1DE1A1D4C10041A1AC000B2450B86812C16104061AC9C"))
+            (property INITVAL_09
+              (string "0x1226B13A4211607082600885C022540242D118DC0786A0D88C0746A0EEA40984F028F5188DA1D6B0"))
+            (property INITVAL_08
+              (string "0x1E051086C3000420DA5F11CC00A625154E2090000400810C7A02281160D61722A002320E0B0028FE"))
+            (property INITVAL_07
+              (string "0x0383A1F2B81264E06CCC10231018410AA7806482108480802A1D0791D4901067C1EC7218ECC18211"))
+            (property INITVAL_06
+              (string "0x00C400A04900062000A415805000110D0C1024B305814020E916869180EA1365A018E3188CD1A243"))
+            (property INITVAL_05
+              (string "0x0F83F01ACB12084004C91045C1100000E070A4410825704A110E8251C4841FC45140410D06A0D01C"))
+            (property INITVAL_04
+              (string "0x15208084210021308047166210241102005028190401101EBA1126412E5413C84048C21022C11EFF"))
+            (property INITVAL_03
+              (string "0x1464C1B4781A2A503408066E20E8E31EAE90043D000570466A184F9038A50A0840B2B200AEB100EA"))
+            (property INITVAL_02
+              (string "0x0D46C1002307A6103226128290E2240009502892018C30440412EB60844D1C00B00A4D06A8400460"))
+            (property INITVAL_01
+              (string "0x1B6680482C09A2202A8D09CC51020F0204103614122030888818C80004830F4800E00C13010006F1"))
+            (property INITVAL_00
+              (string "0x020251E82C16CD31A01F08E371AAAF0CEC0190D51A2091046E1C47108A500CE5B1A8371420009A44"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b000"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "1"))
+            (property DATA_WIDTH_A
+              (string "1")))
+          (instance ROM41C_0_8_6
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x0582F1ACBD1A4471B8AA0B04F186CA0A4181A013020E90B022012041A80A00C9D188AB05E7A1FEE0"))
+            (property INITVAL_1E
+              (string "0x02E45080C41C0A108EF6148AB064F11F403170450805A128BC1BEF10DA7D050A212030000050D061"))
+            (property INITVAL_1D
+              (string "0x1120003C680107A1CAFA090E0088620628B16A22168211D0041060C11049000440201A0826A002A1"))
+            (property INITVAL_1C
+              (string "0x0E0AC0FE001147002A20158AA10052058A90427D1D4770B229000810001004400080080040014E00"))
+            (property INITVAL_1B
+              (string "0x020050CA4611428034620A06A022CD1861E14E8909CA0038B11C60208402182000E2D20148000401"))
+            (property INITVAL_1A
+              (string "0x00624072100B86217AC20B02809024016A419EE80BE4C064000AE8801015058011DC490522008077"))
+            (property INITVAL_19
+              (string "0x0F0DC10EB6194570C88506E1B1882B1944012040068B710021036A10202B09C4200480162A61BC90"))
+            (property INITVAL_18
+              (string "0x126F9006DF130DC1C602034F81B4211182210CEA0801C0D8DE16811100A516A560D45B0B29B18C10"))
+            (property INITVAL_17
+              (string "0x0EC12050A600430140980B010144550081B1AE910203F144800BE8810AA2190091EE3119C391BE40"))
+            (property INITVAL_16
+              (string "0x0AE0101CAF0D4AA112B5110F41BE9A1C020092040000000AE300A5B014530D88A060920C08100820"))
+            (property INITVAL_15
+              (string "0x100D00509113250004CF0880A05A921F074108800080000000008040FE771FE871FE071EE071FEFF"))
+            (property INITVAL_14
+              (string "0x18400014A50882B1565317C051F8130A0C01740F06A8016E95102611C0301C06014201132EB0F80E"))
+            (property INITVAL_13
+              (string "0x024B100008020C90DAB707EFF1FA800001C080251A098160181E0770044010082000C90080000204"))
+            (property INITVAL_12
+              (string "0x000000020000051188221649108A401000303A040208400439000000AA20100201A2020000000000"))
+            (property INITVAL_11
+              (string "0x0808C000010A0000141500400040880A80112A040000515000040201C004080780100C0000000608"))
+            (property INITVAL_10
+              (string "0x00000040440285C020C805004008140CA04008011420406056144010020000400040000000000004"))
+            (property INITVAL_0F
+              (string "0x1269C0DEFE19AA81A4AC1204F1A838012D40E8C800C4E12E1B1480508A8D1221000429176BB1B43D"))
+            (property INITVAL_0E
+              (string "0x0984C0A4530F45918E420649909AA1198CA108AA1BECC15EC016E951D23E020340AE9A00A32150B9"))
+            (property INITVAL_0D
+              (string "0x1DA09180300CC551021402AD416A5115437144AA08A1605AE3062B1034B2044350100D0A8D4030FA"))
+            (property INITVAL_0C
+              (string "0x194801581A0B856140D41549E0F225080081AED110A88182A21F2EF1F2FA1547F0BE420E080112E4"))
+            (property INITVAL_0B
+              (string "0x100E0004820565A034000281416AE10C481006860241D048991D6A61865F096890562D02C90088C8"))
+            (property INITVAL_0A
+              (string "0x1789708EEB1C0C016805082CE086621C0540049100ED8138EB08E1A13A7C17C96150DC1445D0443B"))
+            (property INITVAL_09
+              (string "0x00A0818CB01420D1CA081803C02C901364211CDE0FA4415AAC05E680CEA40BAA010C741AC1A0D6B1"))
+            (property INITVAL_08
+              (string "0x1E45B0842A0AE0812C5803005026091C8E21AA2A00A8017238022800D2F900E4B0E4BA1963319CF6"))
+            (property INITVAL_07
+              (string "0x03473188D816A1F06EC91A61115C241FA141EC7B0E0AD01C1A130AD15C9A00E500727A114C010044"))
+            (property INITVAL_06
+              (string "0x0F0EE1A4A2096850ECE10F4DC0222D0D4930AA8418C95070AA13E4D0A4890A895050CF06C8810C00"))
+            (property INITVAL_05
+              (string "0x0F01F020DF092AC128BD1ACC90C22A00C5211CD10A0120543D0E6EC1D4A5180B1124AD10A130004F"))
+            (property INITVAL_04
+              (string "0x170430140A16A801121305E5716C37060CA1548D164B001613034CA08C2B0E8141B6CC0888A1E800"))
+            (property INITVAL_03
+              (string "0x0C2201243413E6F1EC1C0A8A50C6D31DABF0BEA30165110C3E02CE50C45514030062890B44E18008"))
+            (property INITVAL_02
+              (string "0x1F4CA1E4A10AE6009428100E9024340E4BB1185D1EA540584A0DC181C46603C98114DB010471F46D"))
+            (property INITVAL_01
+              (string "0x0B6FE0A8041C2041D4CA1D8550921D0B4910B276082200208211CA0120400FAD10C8931342B0C290"))
+            (property INITVAL_00
+              (string "0x094E119003106AE0043F1F8E2000070DED20A60C140D2002900742011A200C020110260440403280"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b000"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "1"))
+            (property DATA_WIDTH_A
+              (string "1")))
+          (instance ROM41C_0_9_5
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x050271AE9F00046014AE0346B18C0E0867200030030E30E6A001455002480202A1B4B0116121AE50"))
+            (property INITVAL_1E
+              (string "0x0324802A010980B1DEA215003006A500658120410D07118A8A08E62022A2014B80E084028540F484"))
+            (property INITVAL_1D
+              (string "0x0100003A7004259082640C0B6082600EECA05A4810C0D1D0A0100001AA490D0040A0420804A0A221"))
+            (property INITVAL_1C
+              (string "0x0F6F61FE80152730A008150A808452040A9002181CC501C000000000000000000000000000002C40"))
+            (property INITVAL_1B
+              (string "0x084490EC8E020220746A000CB0AA35196631F88109A0405CB501A0813C0B0C605106FA1108111806"))
+            (property INITVAL_1A
+              (string "0x08242020600A2040442508C900802006C8D0043D01EE10D2110E2550042D14CD30B81311A000823C"))
+            (property INITVAL_19
+              (string "0x0C2F5012721B4070CA87064CF04293126CA04A040383D0000915EB71080A0089A0D632102F509435"))
+            (property INITVAL_18
+              (string "0x1B4F81F2CD0A8DA00802006D4164160800200EEA0CC440D20F0726000E0704825080130285D10018"))
+            (property INITVAL_17
+              (string "0x0EC550C017008B010A12078A2108010823F1BEA20089B154A309EAA1A8901A04C1EE300987317495"))
+            (property INITVAL_16
+              (string "0x0D0011C43F1C4230DABF120F61EE8E1E2A80D44E0D0BC060E910203096D11DC881E0860E48108828"))
+            (property INITVAL_15
+              (string "0x0A82A04C5B00015154BF022B0050F210800000000000000000000000000000000000000000000000"))
+            (property INITVAL_14
+              (string "0x16C00094A50DE220FE1A07EA0182591463D0B03001E76190F811C94002F01D0371E60B13AEF0E660"))
+            (property INITVAL_13
+              (string "0x03EFF1EEFF1DE3602848000000140100018100851A2BA0F4AB1A0500846002080000890080000204"))
+            (property INITVAL_12
+              (string "0x0000000200000210882B05A11102800040401A0402064042A9000040D24C15024140000042010402"))
+            (property INITVAL_11
+              (string "0x0A0A0040041A0821121101400040081C811108C30000614C00016201400408048062100000010008"))
+            (property INITVAL_10
+              (string "0x00008000850346001A40040600280800A00030671420504040104200024008088000000008000000"))
+            (property INITVAL_0F
+              (string "0x0201D0847115688124AC070C11A2B004A050E8C81425502E5510E51098271BE80054CF132991065D"))
+            (property INITVAL_0E
+              (string "0x05E0E1A01B1D0700DC91024890A8A91DC22104200B000154EA0EE911C01A128160E6D10AA8E11485"))
+            (property INITVAL_0D
+              (string "0x1C8891A01206E441408202A5012860156F01802A10A04102D4026F501086144950A00C0AA450587B"))
+            (property INITVAL_0C
+              (string "0x1A2A01001B1C2E412C111440E182851A4211E2880A4BA042B4106921F278070630420804080004E6"))
+            (property INITVAL_0B
+              (string "0x1A6B002C8205648024C716CDE1624501271166220B4C205CE0158460A20E096EC0442C02C5D0088D"))
+            (property INITVAL_0A
+              (string "0x1D29506848054201480F0029C1806B0C0DE1065006E551107B0C4300264D0AAA31405C15C4601498"))
+            (property INITVAL_09
+              (string "0x1C4940406B1024D16A4B0A8BA128B815442058590AA1A1F89D0FC780CEA0110B4160641A0980C691"))
+            (property INITVAL_08
+              (string "0x0D0561A42A0A20000012136D0074D11E4EE1AA950821A054AB1AAB10D6B716CB4078CC01C7B00098"))
+            (property INITVAL_07
+              (string "0x0321F0D2841220F0A2EC0B2B005C851BE52008030000E0803E114791DC5908CD408810140A800210"))
+            (property INITVAL_06
+              (string "0x194660BC880D0B1060340D0860AA450D001022C6088BF154C815ACD080090AC98004E512C050A27E"))
+            (property INITVAL_05
+              (string "0x006D01C8CB128B0190BD10C49014890082310445088520109B1F0E51C48C1C0990208500A4206414"))
+            (property INITVAL_04
+              (string "0x14064014A1162021005B1065012693134621142D04411116B20344802C2103814090480282010000"))
+            (property INITVAL_03
+              (string "0x0C2CA1AE7203A6D1AC8502883166A51DEBB03EF312C401165E00EA80504314C3803A4D064141308E"))
+            (property INITVAL_02
+              (string "0x006A40F0390285C000801284414C7E06E121989810865148E800A5E09413082840169B15A9908CED"))
+            (property INITVAL_01
+              (string "0x1B6B610A8608AA81069C19E4511059020410FA140868800801044C0000400F265102A2134A300A55"))
+            (property INITVAL_00
+              (string "0x000720808E1043A000C50ACA0000071CE180A410102E81FC0D05474100641F00A032F70141401A25"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b000"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "1"))
+            (property DATA_WIDTH_A
+              (string "1")))
+          (instance ROM41C_1_0_4
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x0C00000078020030042C122061506C08870012980C080198401048E07003016AE0143A1C0C21C002"))
+            (property INITVAL_1E
+              (string "0x162A0002A20229112068144B0096100302C10CA00E41A1021200E1F1021E1DCEC08004010701C61E"))
+            (property INITVAL_1D
+              (string "0x1DCE81042A17013008AE03C1802030180460104C096800502214020000A41420008221000640C019"))
+            (property INITVAL_1C
+              (string "0x038601C0EC104000180E000B81D4E8018C810C8F1080A022B20361E190840D21E170EC120090204C"))
+            (property INITVAL_1B
+              (string "0x0261E00E030663E1D8CC0800B070C20586219CA21C0000E0A11701A0222103A310241C0368112211"))
+            (property INITVAL_1A
+              (string "0x02000062E9104CC1800C004640203801833018CC1DC800000A10C0011402100A010058012A404200"))
+            (property INITVAL_19
+              (string "0x0000010200074000260C000C4104181B0290D82A0106005011174381DC0005C280100B10682004AE"))
+            (property INITVAL_18
+              (string "0x000FA100CC0103A0703A0560C062811020409C98066AE0662E108B00987A02681100020C852008E7"))
+            (property INITVAL_17
+              (string "0x01C080640C062AC1C40817688110441468710C02058C0040CB060E0114A3170E2170081C4B210000"))
+            (property INITVAL_16
+              (string "0x1F418148B80402201687148700880E022D3176B8102EE1DCBA034EE1C4BA0408A15CE901AAE05C22"))
+            (property INITVAL_15
+              (string "0x18E030006010006016B81607204048142EE1DCEE1404811080022C71707E046070002805C081D4B0"))
+            (property INITVAL_14
+              (string "0x10628024310708E10E381D20E070C41749200861060410221102287038C1070EC0F08E0746C0887A"))
+            (property INITVAL_13
+              (string "0x1D060142000400202088154A21D6B304CAC0648100484080AC1221101020000A00000910E8E1C047"))
+            (property INITVAL_12
+              (string "0x10E1E024020882A0823B152A015802014E3150080702805C2E00E0410804008601CC3A0044E1DCEA"))
+            (property INITVAL_11
+              (string "0x008A30004703C07008EE032180382201C22004930708603C2404008150AE14428110821C0B0102B8"))
+            (property INITVAL_10
+              (string "0x0821E020A8074C8190C8190C2140A3040CC198CC078CC198CC10E20016230462304623040CC198CC"))
+            (property INITVAL_0F
+              (string "0x0003801C0800080058CB0042A1606410C3A01009030E11442800C4A0401804421022220640A102C4"))
+            (property INITVAL_0E
+              (string "0x11C1804C1204C091D20400E1211C0408E330DC3E18C41102C2000C21D44A0048B154381C42306000"))
+            (property INITVAL_0D
+              (string "0x044EC110EE044B8108A8022A2110E113008000200502A1548B0003A0983B05680180E21100A05228"))
+            (property INITVAL_0C
+              (string "0x1760B1463B076AA1C4A8104AE15022044BB114C20000E11C2005020070FB1140E002A200441054AC"))
+            (property INITVAL_0B
+              (string "0x114EB10C3B1DC01008EB174AC0F48A15C980F42E040C21762810C6008600088840D081034BA154BA"))
+            (property INITVAL_0A
+              (string "0x11CFB11048008C615CBA1902E16406174AA174111668610846070EC146821440A1921B0082C18446"))
+            (property INITVAL_09
+              (string "0x18C201108C018290422A1768803C080F4100E2801C003106330668401C8B104BA078CC00E0404211"))
+            (property INITVAL_08
+              (string "0x1981C1C2EE1D878044500C6880108E18EBB174040E02C0300015C2C10C321C0AE1C6AA1F4EE1D082"))
+            (property INITVAL_07
+              (string "0x010021148604631110CC0C4330308C054A20904C03C01168100240A1D4AA1D6890406B15CAB15084"))
+            (property INITVAL_06
+              (string "0x0404601044156810300E1560E0241A0229005CBA1D8A01140B062C011083010A31021B0404015844"))
+            (property INITVAL_05
+              (string "0x0E60400E00000010604408C441C2D2008811C604000100E8C20783A138E00E4810221C1C09104210"))
+            (property INITVAL_04
+              (string "0x096B105CB00ACC008E4013A0408E401C000156BA176AA156821440A10000000CC198C0000CC198CC"))
+            (property INITVAL_03
+              (string "0x00000160A1012810041014C00010910240805430056881502E174281140A00022004AD11486162EA"))
+            (property INITVAL_02
+              (string "0x010730261C1928710022002E0100000000006A8407000004281C48703C381C0C005036008A110410"))
+            (property INITVAL_01
+              (string "0x0C43615C10100021C42914408000180142B1040B160B814400000E10308213C0A15C040104803CEE"))
+            (property INITVAL_00
+              (string "0x1C40C04046118EE1DCEE1C04814022176BB11818094110528C1C2C600848094FB142C1020210304C"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b010"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "2"))
+            (property DATA_WIDTH_A
+              (string "2")))
+          (instance ROM41C_1_1_3
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x1A000000F21E4981CEB3044FB0BAF912A5D0B01F1E6CA1F028186E0138291D84003AF513EB81984F"))
+            (property INITVAL_1E
+              (string "0x088D81C8DF1DC2702EBF0A48F1780B0FCDB1FEED09EFF16AFD1BCF106A6D1A8CE09CBE11A2C1A4F0"))
+            (property INITVAL_1D
+              (string "0x09843074101467A1B8A7122AC1F2890F2DE0901011A4B12E9E138B0198E61ECB11583405E90066D4"))
+            (property INITVAL_1C
+              (string "0x156B31DCDC0DABA16EA30404E07EFC0582C1F6E11F8FF0C8E30D8130585B1F6CF1AC1C0D6C30F2C9"))
+            (property INITVAL_1B
+              (string "0x0E4A11440C1AA470E67110C310E45306423176F316432158771D65F0843E090C8032AA1DAE606A36"))
+            (property INITVAL_1A
+              (string "0x056AB102D70DACB0F4AA14C8B1621700811190370BA6E0DCB50EA2B1DCEB174EE1F6BB1CCD71EC2A"))
+            (property INITVAL_19
+              (string "0x066331660004A03072EF060100DE7F1EEFF0B81517ACF046441CAE8002301F21400C6408241046F3"))
+            (property INITVAL_18
+              (string "0x0140F19CFF1481700E2602C000427E1EAD806EBC056D711E3E068E0070181A2B51F8331FE1500A03"))
+            (property INITVAL_17
+              (string "0x044B405CB215ED3066CB0B2BB1725E1DCE60D4F31E402036381C63E16AAF1362F19C0E1367317C39"))
+            (property INITVAL_16
+              (string "0x04CF80E070186A11903E05C9D130E41FEDF0EE2016C99130001F4D91202019C84050AA1D06D0522E"))
+            (property INITVAL_15
+              (string "0x02AE6096E209E0519EA207C671423A1743819AD81962C11CA70AC0B09C62118D51863D03A8E0FE4A"))
+            (property INITVAL_14
+              (string "0x180BE08687066731BC33016C4186971BE1917AE419EBE0EC4B0E864086C71224B1E6781BC721A46F"))
+            (property INITVAL_13
+              (string "0x17ABB1FC341B6CB0B64C180001820F1A0071C04C06499186F301E0C0CC3213490006321848119A5F"))
+            (property INITVAL_12
+              (string "0x1CC25144C80DCD403E270DE7C10EE305C581FABB13CEB0181D14CC2120BC1BAEE04EF605CB209A5E"))
+            (property INITVAL_11
+              (string "0x164EE13ADA04C931A49D170CB0AE3101E9311E281BCD50C49A0508E1D8D50A21609CE303E4F15CC6"))
+            (property INITVAL_10
+              (string "0x1E8530007E0343B0763B076B31464E1DCAA1542A0042204422048EC190EC1D8EC1D8EC1DC2204422"))
+            (property INITVAL_0F
+              (string "0x00004070F41E66A0B037194860FA3218E0511C82038F31FCEC1E047056FE1E4F40CEFF17EEF0DAB2"))
+            (property INITVAL_0E
+              (string "0x1D6F61069A166A402CB81D4C11D6DD1B0FC12A8D1565B16A7911A2312CA515CE70D45215CBA1FE45"))
+            (property INITVAL_0D
+              (string "0x1E2E317E68116DB1AEFE0CEEE1463912E8B070AC1D4EA154BF198BA06EDB1FEA9172221DE321B2E3"))
+            (property INITVAL_0C
+              (string "0x0AE0F0B8D80F6FF0C4BE1E6A10AE2D19E47092721C00016A281D03D116BC176C9180BB19A6F1B483"))
+            (property INITVAL_0B
+              (string "0x112D50BCA600A8411A800C0191A425152681949A132B9048D80D26B1D0D90FEDB1F67708C050A041"))
+            (property INITVAL_0A
+              (string "0x132810D0260FC1C0400510C9009CBE0A82A00A56158F613AD3114AB152720A4E2060F919E9F1EE82"))
+            (property INITVAL_09
+              (string "0x116AE1F4A315E18060551106B072461DE0718EB8126A80D2EC0FCE6166F8166EC1D6FF17C9407E74"))
+            (property INITVAL_08
+              (string "0x164BF0F455082AF0466D17A761FE5107831060D51DCDF08A4F15A2B1D6BF098AC19C000722C0A8BD"))
+            (property INITVAL_07
+              (string "0x06E031F4B60440D110830C4201B08807CA31C867122941A6621F4C802A41052A90D6A40AA550DEEF"))
+            (property INITVAL_06
+              (string "0x17C9A1DE741AEB50FC031F8EF1546A0EC2C1000000EA80CA8F1CE03196CC070A315E6C1546A154FC"))
+            (property INITVAL_05
+              (string "0x15EC4044B90762E07CF3068CE0226E1A6B5122F808C790767314677116BE0D2EB0A84F0F45D122AD"))
+            (property INITVAL_04
+              (string "0x0CE6F1224C0DA3904E3B04ED414EBB0460C104690CE42144610A486098CC19C220442201C220442A"))
+            (property INITVAL_03
+              (string "0x000000B869076B5134441B00516C3A1E8E602AEC1FE7C1E8FB1BC2F060CA04CAD042520945611255"))
+            (property INITVAL_02
+              (string "0x07C8E11A971F0E61D03B04AB8180000000004CD41F63205E3C1A256084DB0700806C3C1A8A71147F"))
+            (property INITVAL_01
+              (string "0x15C831EEA2160E10661B0F284170EB11C16064CA05E771F62B100AF0D48D02C23000B305248130CD"))
+            (property INITVAL_00
+              (string "0x1BC12152BD156D9130C119A481422F102350CE49154671DEAF1642A07E3D194941D20D012B41C8E1"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b010"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "2"))
+            (property DATA_WIDTH_A
+              (string "2")))
+          (instance ROM41C_1_2_2
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x10000014050F202024680BA16156AA0D40000041056B719C17058980D4DD066E61225616A5008A16"))
+            (property INITVAL_1E
+              (string "0x14C690EC4C1EA440A6EB11EF10F0851B2E700086158020340D1D089174930ECE40C2C6164030589A"))
+            (property INITVAL_1D
+              (string "0x1D463178EA116A204627024330083410CA00708D062AB096CF19EC50AE361D25E0AED81A83706A4E"))
+            (property INITVAL_1C
+              (string "0x18A751CEEF028B40F87515E2E13AB61CEBE0AA781827713043134AB156280460B1A66F12A7108428"))
+            (property INITVAL_1B
+              (string "0x116E71FAE504E4B1E0C60CA590D65B17EDF00E791F69B12618152A1112C11182F1E8C70BEFF034BB"))
+            (property INITVAL_1A
+              (string "0x13647194A8128F8112CA0E6200B2E91C6BE04688016ED03E51134A5150FA07C8F07A6B0F0A80D0AA"))
+            (property INITVAL_19
+              (string "0x0AA5503EF7174380460C114F7028D30364105EC40A6471428807ADF15CD50888B1E21B05A2D15EF9"))
+            (property INITVAL_18
+              (string "0x1727D0AA040E0FA1D4EB1A0381DE7507463192E6152EF142D6026AB0763809A9A0665C06800114AB"))
+            (property INITVAL_17
+              (string "0x17CD2198580E08C1D8F5026B30A4A105AC41187E1CA3918EF207E7C07C07056A519EF914CBE06A5C"))
+            (property INITVAL_16
+              (string "0x03C8A1CCEA1D6CE0B2A0130D21540E110211DEAA0743717C9810437174B81DE3A144F600CFB1F6FE"))
+            (property INITVAL_15
+              (string "0x054010584E142981F6151E4A00DC0910CAE0148316C5B06203152D1178500BA26072A014CE9140AD"))
+            (property INITVAL_14
+              (string "0x17883134D9092BF1C669052DE092E507E0818C0A1C0B213288112AD13038030A0012B20FC7204CFF"))
+            (property INITVAL_13
+              (string "0x0EC55000B30CAF610A2A154AA156A401CAC0F02E1F8A605E2400E03056CD00E2F1DA5014AB70DCA2"))
+            (property INITVAL_12
+              (string "0x18E4A0785C040E809AF812EA60487C120611F8730DAC3148AC08AC9144410D40D146EF19C32094C8"))
+            (property INITVAL_11
+              (string "0x0CA8F01CA90906A044261503312088074CE1E80101AE01406919E7B146AA15CEB174BC16AE702498"))
+            (property INITVAL_10
+              (string "0x0F4A61362D1847B1F67B1F65E05E4E1DE3F16EF7076731F67310CEE0E2CF19ACF19ACF19EFB0E6FB"))
+            (property INITVAL_0F
+              (string "0x0009B16C710FEA700611054C004420120820F670096E917CC20423214A090D4681306E1E4FA07A60"))
+            (property INITVAL_0E
+              (string "0x07CF31345A1BC72070D600A1C036F61C4100E67B0B6C6072481C04C0E0281D8A21540815CCF02220"))
+            (property INITVAL_0D
+              (string "0x1980B062020C819152A91300C036710F6F10BC250FA7D1FEF102E01068F0006900882F126D81C8C3"))
+            (property INITVAL_0C
+              (string "0x002E100CD2044C315EFB0F8FB1F6CE198A907C4F08A5A0ACF70BAC40F6EE1745709CA51AA901D4A4"))
+            (property INITVAL_0B
+              (string "0x164D90C411194780B8E912482054B0158411C4C0188C60001208AC4022061062407E3A1109A154A0"))
+            (property INITVAL_0A
+              (string "0x10872122410702215CBC062640047A034AA072A81629415CE2026C0058BF1DEF0180300204818232"))
+            (property INITVAL_09
+              (string "0x164AF076300F0C014A20146B1088B001E111D21205E5C16C31022960E83B038280888C0B82A18288"))
+            (property INITVAL_08
+              (string "0x190681663315473158A211C950F6C30CCAB130EA022CC100271F4F31303014EF20CEAA0542E17EDE"))
+            (property INITVAL_07
+              (string "0x166FA17ECB1FCD21FEB817EEF05EFB1525C0D28C15CC810839048520D4AA1021B008A91F0F105687"))
+            (property INITVAL_06
+              (string "0x0D8E40A6730409A112BB1FE0706CA21320214C9A0C82F050F3012CF062AC1E628120930CCC105C86"))
+            (property INITVAL_05
+              (string "0x1A233196B410E831449C0E06914CA01D6B905C070640E0000C0380A01865084080148404E3614CD1"))
+            (property INITVAL_04
+              (string "0x152B114C1114C0E01C470201219C87056BF05293022AA1403E110FA05CEE1DE7F0FE7B05EB3166BB"))
+            (property INITVAL_03
+              (string "0x00002044A110C38088A214CB00E61C0606B184F50D6BB156E2158F31647F1A2FE1F8A006A13182BF"))
+            (property INITVAL_02
+              (string "0x1F2820EC181009413CE61A2CF1780000000046471D6DD1AEAE15805074E90FE34196A61D62806C8C"))
+            (property INITVAL_01
+              (string "0x1584F1FE3B03A7C05CEC154F30BE2B0E0EB02C7302AFD018D51FC631423C03CDA154491B4BB16C8A"))
+            (property INITVAL_00
+              (string "0x018C40CC40028F7174EF0DCB3018CE03428028821249819C94088CE1863E0649A182FD0404106E84"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b010"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "2"))
+            (property DATA_WIDTH_A
+              (string "2")))
+          (instance ROM41C_1_3_1
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x180000180005E00066700764D1AC120DC500248E0BCA6008291FAA011E98166B00CEC31DE2802083"))
+            (property INITVAL_1E
+              (string "0x1241F0440314601064B0100101D60810AE11D6D21AEAF096A10D8AF03694086761CAAC1AC51072B7"))
+            (property INITVAL_1D
+              (string "0x0FEB912055132B304A2C166821580C01CE403491028F0094171848308A610D46A136090D4E61E629"))
+            (property INITVAL_1C
+              (string "0x100F3062540529E1806D1AE7B0205C060EA09C100D63213222156100B262154130CA9414C00044A0"))
+            (property INITVAL_1B
+              (string "0x150870C0220543913C4215A750427F0B4030CAF60F29E0024A098B8126581329813282078D800021"))
+            (property INITVAL_1A
+              (string "0x072CC142921D04A114A21548C0DA04070D01600E126E306C61186DA1505E030870205C0166F022C0"))
+            (property INITVAL_19
+              (string "0x112AB0DE101EE87028F1086650B48316A0C128500D4070A8B900210182020A09904679024001EA93"))
+            (property INITVAL_18
+              (string "0x01E4701E651C23404824004CA05253116060829C1F882180290804E18CE5002CB0109D0200008A55"))
+            (property INITVAL_17
+              (string "0x1DAC004880114500F05C0AC71194E505E2F1C0171C6AF0B88401A14194A10EA100A05B0BC231E204"))
+            (property INITVAL_16
+              (string "0x06EAD0CACF0DE05012AA19C0A042501548B066FF190BB1601E15E730703E0C8150CC921265D01E0A"))
+            (property INITVAL_15
+              (string "0x058EC1FCCB128940B40208CC41D449124E51028511C791C69D17213184C51A02A1BA941A0FA1FE45"))
+            (property INITVAL_14
+              (string "0x1667D15658198331D4DE132EB12AAB19E3D1DC491A4591529B1542D1400A0008A178340FCBA1D4E0"))
+            (property INITVAL_13
+              (string "0x0F4851D6F80745612C77154AE050821CA5B056FC028A60E4270748A1AA5F05816180281C66F06CE5"))
+            (property INITVAL_12
+              (string "0x05843108041C8D41A802034E3066051E8341EADC1A6F90A0501D82B14EAB15C4114A35014C91028A"))
+            (property INITVAL_11
+              (string "0x1CEBC0ECE0082E81CEB9112A0156D8186050A28C0FA69108AA1A2B814EB907E5C1A2551BE400520E"))
+            (property INITVAL_10
+              (string "0x032AF11A621BE3D01A5C0BE05058F70688818004030C00088005873078701EA350E47E06804118C0"))
+            (property INITVAL_0F
+              (string "0x000FC1A068070AA000C21748709C600B4F0178580CA381A4F504296170AD0321B132320E65F05420"))
+            (property INITVAL_0E
+              (string "0x046B20D68A146501A28D100050482204C4C11848194130147D1CED5118B51EA8D1FEDF1EC0C09874"))
+            (property INITVAL_0D
+              (string "0x0EADA038970B4940D85E1323F12ACB1181000E2217CBF1FA42114760045505072058B1144431D080"))
+            (property INITVAL_0C
+              (string "0x1A634082A7088E90A0190000B1F4760B0DC186A005ED81AE0417A560F84819E03010780442A07EC0"))
+            (property INITVAL_0B
+              (string "0x1565E0C400002990C8290881A01CCA1F29209C050142604ECA0844A1702E1D2E6178DB13E0F1EA45"))
+            (property INITVAL_0A
+              (string "0x100000E493110A10D4930AA950D2CB1DE3F09EB9182E414427068241C2F014080066A2052850E003"))
+            (property INITVAL_09
+              (string "0x104EF070290C6520F66A0B4E01504013A0A0D00F0E49A1CC96184E109C9808A0D0F29B14AAF0B699"))
+            (property INITVAL_08
+              (string "0x02231110CC1F4601CA8A002421506B158EC1FC6E08AB3132700B20E09455000041120004AF31E809"))
+            (property INITVAL_07
+              (string "0x1A86F1A021090980A42A0288B10A221FEF21E251166D9142AE1300C07ED50285B114500A0040BAE1"))
+            (property INITVAL_06
+              (string "0x17C2403CA10E24B13CEF1E89410C82152B70060C06E210EAD41B0A1030BE022AF0D4940D4E504C0A"))
+            (property INITVAL_05
+              (string "0x088DC150A810C401CC040482A06AA40CE9A1B0610CEBE0DE55108A60483200A6B1549316A1718A04"))
+            (property INITVAL_04
+              (string "0x0E0FB1A0450DE8E0C8CD0060A0C8CD1DE0502800198F31EAC51DE1716677068800888C0788C18004"))
+            (property INITVAL_03
+              (string "0x000030F45B1660A1BE9F0CAE908C08158190A0021D86F16A3F18800122021F6390AAD80060B0B615"))
+            (property INITVAL_02
+              (string "0x050BC042B01A4E21AEE40D2010300000000052E50AE8613EB70B0E41264C1029703AEC0DA2904C9E"))
+            (property INITVAL_01
+              (string "0x0C8AB1E08C008151FE5808C57142991685A0023507E8814066030DA1049D12A950A2A80DCDA17AC1"))
+            (property INITVAL_00
+              (string "0x008800D469048730729B06CDE1107E0080504E9A02499190EC0A862154960A4BC056BA1525900A91"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b010"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "2"))
+            (property DATA_WIDTH_A
+              (string "2")))
+          (instance scuba_vhi_inst
+            (viewRef view1 
+              (cellRef VHI)))
+          (instance ROM41C_1_4_0
+            (viewRef view1 
+              (cellRef DP8KC))
+            (property INIT_DATA
+              (string "STATIC"))
+            (property ASYNC_RESET_RELEASE
+              (string "SYNC"))
+            (property MEM_LPC_FILE
+              (string "ROM41C.lpc"))
+            (property MEM_INIT_FILE
+              (string "rom41c.bin"))
+            (property INITVAL_1F
+              (string "0x0000001C0007EE4168410660C04810190CB0863018A0F0003007412096D81EE521E2CF1BE0D05CDB"))
+            (property INITVAL_1E
+              (string "0x0E60F1E61006623068C80BC801A0020008F0000C17800064081941A1643204C101F6C3140421461D"))
+            (property INITVAL_1D
+              (string "0x0A2DB0E2AA00E200984A01C1401E4D0788D000E4182B81A2910B6DF06C0210630198410188819C32"))
+            (property INITVAL_1C
+              (string "0x020CE05A31098DF1A8FC1D637072200E2F71986A086E406271064220440C0042211CF106613028C1"))
+            (property INITVAL_1B
+              (string "0x0640A1004C198C20463C1983811460158040640A05430014030162002080020B102013060A006231"))
+            (property INITVAL_1A
+              (string "0x01AFD1843311A1209EC71E0480584C0E2C41620006A771EE34008D3022D40EC1D0F63A1C448002D5"))
+            (property INITVAL_19
+              (string "0x06020038611F2DF050F21BCC201804010101E281060101C621070311C6CC098F11AE70188C41F842"))
+            (property INITVAL_18
+              (string "0x03E0C0F6211E84C0F87C088100C233044041A6131786118843002181C0FC008B20E24C0000000000"))
+            (property INITVAL_17
+              (string "0x1FEF40C2480C00310220018C40608D0868010A000028D10CE019234040F019A3D130210E8840024C"))
+            (property INITVAL_16
+              (string "0x17013106871B81A060440887019E160221811087046ED1A486020E103C861B86A102E1022AE1DCE4"))
+            (property INITVAL_15
+              (string "0x0900C1F81307801006CD088C5080550020F1E6F30481000A0F0460F1100308841000211C4F11DE49"))
+            (property INITVAL_14
+              (string "0x00EBE07CB31768E09E391C00E096CC0123C180D00088200611066840621309264036821B0500984A"))
+            (property INITVAL_13
+              (string "0x030C30044918624066370AA5D0284001A5001A520920C1FA40060000768B11868128C0118CE0588C"))
+            (property INITVAL_12
+              (string "0x100320221C192280D848100830A0381A0EC0B651092001E6F30808D00E43190D51943A1A8DF1E6F0"))
+            (property INITVAL_11
+              (string "0x082000788C0664100EEE04405000CF0241A1C008172800624D104600040F110A0056B81DE8F0A088"))
+            (property INITVAL_10
+              (string "0x0800607C091100002211000FA0940C11800008C40508C198C401ACB040C800044088001180000004"))
+            (property INITVAL_0F
+              (string "0x0007B0845904E3F122C3170870004B010FE0C0600442305003010A01CE0101EC2066081102F0C40B"))
+            (property INITVAL_0E
+              (string "0x0C41611C3811C601C2CF010080BC8018E0804472188210A00C1F4A81D8381C03C0AA08040D9010BA"))
+            (property INITVAL_0D
+              (string "0x010F8080F2046CF0100106640014E00142409E82128170ACA4010BC0E03C0F8F605A2E02A3B10260"))
+            (property INITVAL_0C
+              (string "0x09E701A43D118BE07CA20FAA50A20C122381704E19E0E024E3182840F4C4140D218405030D012A61"))
+            (property INITVAL_0B
+              (string "0x01E3C1984C0664109AD708C9C1887F1E604188D11BC2C01803190540706C1060C00432026850B48A"))
+            (property INITVAL_0A
+              (string "0x0260C1A8D711ACE11A7B146510904C18A950302100C0D018C41EE8F0986E01C710860719C50058C0"))
+            (property INITVAL_09
+              (string "0x00082086601E4831C05F002A4066141D408186410DA7D14A080108E0DEF01F0581840209CCB10031"))
+            (property INITVAL_08
+              (string "0x034121C2E21D0E41903C1A0C41A4BE188750ECC81884802470156E9008881DEAE05EAA0FCE21D6B4"))
+            (property INITVAL_07
+              (string "0x0E4550F48E0C843132101CC44072911AEFC07021064E10163D00A3E02A6A040D312808144A018004"))
+            (property INITVAL_06
+              (string "0x0804D0208A068B2062D10B01202834006331C2860204E070E0106E40C61208C0F1A030088E109888"))
+            (property INITVAL_05
+              (string "0x1808709EEE1DC921F884138CD04029000001C0400963C090700081807C201B4030601404C031C038"))
+            (property INITVAL_04
+              (string "0x0F0A01C40401C0C098BD06204198BD188920D08A198590A60A01828076370F8C00000C0600000844"))
+            (property INITVAL_03
+              (string "0x0000304683182501B80309AC91C6330003310C3D100920140F192E206CF816606170201E8481062A"))
+            (property INITVAL_02
+              (string "0x1A070020321C68C136861220014000000000628407030000EB1E2040244B04404086C61904308830"))
+            (property INITVAL_01
+              (string "0x102490A41C09238190A3198E2064200C2A3188200FE47182930408006A0003E1A144431208006633"))
+            (property INITVAL_00
+              (string "0x0E211088C00A2210242E0588002200018CC1A0101A8330209D006C4000F818838100230704004062"))
+            (property CSDECODE_B
+              (string "0b111"))
+            (property CSDECODE_A
+              (string "0b010"))
+            (property WRITEMODE_B
+              (string "NORMAL"))
+            (property WRITEMODE_A
+              (string "NORMAL"))
+            (property GSR
+              (string "ENABLED"))
+            (property RESETMODE
+              (string "ASYNC"))
+            (property REGMODE_B
+              (string "NOREG"))
+            (property REGMODE_A
+              (string "NOREG"))
+            (property DATA_WIDTH_B
+              (string "2"))
+            (property DATA_WIDTH_A
+              (string "2")))
+          (instance scuba_vlo_inst
+            (viewRef view1 
+              (cellRef VLO)))
+          (instance FF_0
+            (viewRef view1 
+              (cellRef FD1P3DX))
+            (property GSR
+              (string "ENABLED")))
+          (instance mux_9
+            (viewRef view1 
+              (cellRef MUX21)))
+          (instance mux_8
+            (viewRef view1 
+              (cellRef MUX21)))
+          (instance mux_7
+            (viewRef view1 
+              (cellRef MUX21)))
+          (instance mux_6
+            (viewRef view1 
+              (cellRef MUX21)))
+          (instance mux_5
+            (viewRef view1 
+              (cellRef MUX21)))
+          (instance mux_4
+            (viewRef view1 
+              (cellRef MUX21)))
+          (instance mux_3
+            (viewRef view1 
+              (cellRef MUX21)))
+          (instance mux_2
+            (viewRef view1 
+              (cellRef MUX21)))
+          (instance mux_1
+            (viewRef view1 
+              (cellRef MUX21)))
+          (instance mux_0
+            (viewRef view1 
+              (cellRef MUX21)))
+          (net scuba_vhi
+            (joined
+              (portRef Z (instanceRef scuba_vhi_inst))
+              (portRef OCEB (instanceRef ROM41C_0_0_14))
+              (portRef CEB (instanceRef ROM41C_0_0_14))
+              (portRef OCEB (instanceRef ROM41C_0_1_13))
+              (portRef CEB (instanceRef ROM41C_0_1_13))
+              (portRef OCEB (instanceRef ROM41C_0_2_12))
+              (portRef CEB (instanceRef ROM41C_0_2_12))
+              (portRef OCEB (instanceRef ROM41C_0_3_11))
+              (portRef CEB (instanceRef ROM41C_0_3_11))
+              (portRef OCEB (instanceRef ROM41C_0_4_10))
+              (portRef CEB (instanceRef ROM41C_0_4_10))
+              (portRef OCEB (instanceRef ROM41C_0_5_9))
+              (portRef CEB (instanceRef ROM41C_0_5_9))
+              (portRef OCEB (instanceRef ROM41C_0_6_8))
+              (portRef CEB (instanceRef ROM41C_0_6_8))
+              (portRef OCEB (instanceRef ROM41C_0_7_7))
+              (portRef CEB (instanceRef ROM41C_0_7_7))
+              (portRef OCEB (instanceRef ROM41C_0_8_6))
+              (portRef CEB (instanceRef ROM41C_0_8_6))
+              (portRef OCEB (instanceRef ROM41C_0_9_5))
+              (portRef CEB (instanceRef ROM41C_0_9_5))
+              (portRef OCEB (instanceRef ROM41C_1_0_4))
+              (portRef CEB (instanceRef ROM41C_1_0_4))
+              (portRef OCEB (instanceRef ROM41C_1_1_3))
+              (portRef CEB (instanceRef ROM41C_1_1_3))
+              (portRef OCEB (instanceRef ROM41C_1_2_2))
+              (portRef CEB (instanceRef ROM41C_1_2_2))
+              (portRef OCEB (instanceRef ROM41C_1_3_1))
+              (portRef CEB (instanceRef ROM41C_1_3_1))
+              (portRef OCEB (instanceRef ROM41C_1_4_0))
+              (portRef CEB (instanceRef ROM41C_1_4_0))))
+          (net scuba_vlo
+            (joined
+              (portRef Z (instanceRef scuba_vlo_inst))
+              (portRef CSB2 (instanceRef ROM41C_0_0_14))
+              (portRef CSA2 (instanceRef ROM41C_0_0_14))
+              (portRef CSB1 (instanceRef ROM41C_0_0_14))
+              (portRef CSA1 (instanceRef ROM41C_0_0_14))
+              (portRef CSB0 (instanceRef ROM41C_0_0_14))
+              (portRef RSTB (instanceRef ROM41C_0_0_14))
+              (portRef WEB (instanceRef ROM41C_0_0_14))
+              (portRef WEA (instanceRef ROM41C_0_0_14))
+              (portRef CLKB (instanceRef ROM41C_0_0_14))
+              (portRef ADB12 (instanceRef ROM41C_0_0_14))
+              (portRef ADB11 (instanceRef ROM41C_0_0_14))
+              (portRef ADB10 (instanceRef ROM41C_0_0_14))
+              (portRef ADB9 (instanceRef ROM41C_0_0_14))
+              (portRef ADB8 (instanceRef ROM41C_0_0_14))
+              (portRef ADB7 (instanceRef ROM41C_0_0_14))
+              (portRef ADB6 (instanceRef ROM41C_0_0_14))
+              (portRef ADB5 (instanceRef ROM41C_0_0_14))
+              (portRef ADB4 (instanceRef ROM41C_0_0_14))
+              (portRef ADB3 (instanceRef ROM41C_0_0_14))
+              (portRef ADB2 (instanceRef ROM41C_0_0_14))
+              (portRef ADB1 (instanceRef ROM41C_0_0_14))
+              (portRef ADB0 (instanceRef ROM41C_0_0_14))
+              (portRef DIB8 (instanceRef ROM41C_0_0_14))
+              (portRef DIA8 (instanceRef ROM41C_0_0_14))
+              (portRef DIB7 (instanceRef ROM41C_0_0_14))
+              (portRef DIA7 (instanceRef ROM41C_0_0_14))
+              (portRef DIB6 (instanceRef ROM41C_0_0_14))
+              (portRef DIA6 (instanceRef ROM41C_0_0_14))
+              (portRef DIB5 (instanceRef ROM41C_0_0_14))
+              (portRef DIA5 (instanceRef ROM41C_0_0_14))
+              (portRef DIB4 (instanceRef ROM41C_0_0_14))
+              (portRef DIA4 (instanceRef ROM41C_0_0_14))
+              (portRef DIB3 (instanceRef ROM41C_0_0_14))
+              (portRef DIA3 (instanceRef ROM41C_0_0_14))
+              (portRef DIB2 (instanceRef ROM41C_0_0_14))
+              (portRef DIA2 (instanceRef ROM41C_0_0_14))
+              (portRef DIB1 (instanceRef ROM41C_0_0_14))
+              (portRef DIA1 (instanceRef ROM41C_0_0_14))
+              (portRef DIB0 (instanceRef ROM41C_0_0_14))
+              (portRef DIA0 (instanceRef ROM41C_0_0_14))
+              (portRef CSB2 (instanceRef ROM41C_0_1_13))
+              (portRef CSA2 (instanceRef ROM41C_0_1_13))
+              (portRef CSB1 (instanceRef ROM41C_0_1_13))
+              (portRef CSA1 (instanceRef ROM41C_0_1_13))
+              (portRef CSB0 (instanceRef ROM41C_0_1_13))
+              (portRef RSTB (instanceRef ROM41C_0_1_13))
+              (portRef WEB (instanceRef ROM41C_0_1_13))
+              (portRef WEA (instanceRef ROM41C_0_1_13))
+              (portRef CLKB (instanceRef ROM41C_0_1_13))
+              (portRef ADB12 (instanceRef ROM41C_0_1_13))
+              (portRef ADB11 (instanceRef ROM41C_0_1_13))
+              (portRef ADB10 (instanceRef ROM41C_0_1_13))
+              (portRef ADB9 (instanceRef ROM41C_0_1_13))
+              (portRef ADB8 (instanceRef ROM41C_0_1_13))
+              (portRef ADB7 (instanceRef ROM41C_0_1_13))
+              (portRef ADB6 (instanceRef ROM41C_0_1_13))
+              (portRef ADB5 (instanceRef ROM41C_0_1_13))
+              (portRef ADB4 (instanceRef ROM41C_0_1_13))
+              (portRef ADB3 (instanceRef ROM41C_0_1_13))
+              (portRef ADB2 (instanceRef ROM41C_0_1_13))
+              (portRef ADB1 (instanceRef ROM41C_0_1_13))
+              (portRef ADB0 (instanceRef ROM41C_0_1_13))
+              (portRef DIB8 (instanceRef ROM41C_0_1_13))
+              (portRef DIA8 (instanceRef ROM41C_0_1_13))
+              (portRef DIB7 (instanceRef ROM41C_0_1_13))
+              (portRef DIA7 (instanceRef ROM41C_0_1_13))
+              (portRef DIB6 (instanceRef ROM41C_0_1_13))
+              (portRef DIA6 (instanceRef ROM41C_0_1_13))
+              (portRef DIB5 (instanceRef ROM41C_0_1_13))
+              (portRef DIA5 (instanceRef ROM41C_0_1_13))
+              (portRef DIB4 (instanceRef ROM41C_0_1_13))
+              (portRef DIA4 (instanceRef ROM41C_0_1_13))
+              (portRef DIB3 (instanceRef ROM41C_0_1_13))
+              (portRef DIA3 (instanceRef ROM41C_0_1_13))
+              (portRef DIB2 (instanceRef ROM41C_0_1_13))
+              (portRef DIA2 (instanceRef ROM41C_0_1_13))
+              (portRef DIB1 (instanceRef ROM41C_0_1_13))
+              (portRef DIA1 (instanceRef ROM41C_0_1_13))
+              (portRef DIB0 (instanceRef ROM41C_0_1_13))
+              (portRef DIA0 (instanceRef ROM41C_0_1_13))
+              (portRef CSB2 (instanceRef ROM41C_0_2_12))
+              (portRef CSA2 (instanceRef ROM41C_0_2_12))
+              (portRef CSB1 (instanceRef ROM41C_0_2_12))
+              (portRef CSA1 (instanceRef ROM41C_0_2_12))
+              (portRef CSB0 (instanceRef ROM41C_0_2_12))
+              (portRef RSTB (instanceRef ROM41C_0_2_12))
+              (portRef WEB (instanceRef ROM41C_0_2_12))
+              (portRef WEA (instanceRef ROM41C_0_2_12))
+              (portRef CLKB (instanceRef ROM41C_0_2_12))
+              (portRef ADB12 (instanceRef ROM41C_0_2_12))
+              (portRef ADB11 (instanceRef ROM41C_0_2_12))
+              (portRef ADB10 (instanceRef ROM41C_0_2_12))
+              (portRef ADB9 (instanceRef ROM41C_0_2_12))
+              (portRef ADB8 (instanceRef ROM41C_0_2_12))
+              (portRef ADB7 (instanceRef ROM41C_0_2_12))
+              (portRef ADB6 (instanceRef ROM41C_0_2_12))
+              (portRef ADB5 (instanceRef ROM41C_0_2_12))
+              (portRef ADB4 (instanceRef ROM41C_0_2_12))
+              (portRef ADB3 (instanceRef ROM41C_0_2_12))
+              (portRef ADB2 (instanceRef ROM41C_0_2_12))
+              (portRef ADB1 (instanceRef ROM41C_0_2_12))
+              (portRef ADB0 (instanceRef ROM41C_0_2_12))
+              (portRef DIB8 (instanceRef ROM41C_0_2_12))
+              (portRef DIA8 (instanceRef ROM41C_0_2_12))
+              (portRef DIB7 (instanceRef ROM41C_0_2_12))
+              (portRef DIA7 (instanceRef ROM41C_0_2_12))
+              (portRef DIB6 (instanceRef ROM41C_0_2_12))
+              (portRef DIA6 (instanceRef ROM41C_0_2_12))
+              (portRef DIB5 (instanceRef ROM41C_0_2_12))
+              (portRef DIA5 (instanceRef ROM41C_0_2_12))
+              (portRef DIB4 (instanceRef ROM41C_0_2_12))
+              (portRef DIA4 (instanceRef ROM41C_0_2_12))
+              (portRef DIB3 (instanceRef ROM41C_0_2_12))
+              (portRef DIA3 (instanceRef ROM41C_0_2_12))
+              (portRef DIB2 (instanceRef ROM41C_0_2_12))
+              (portRef DIA2 (instanceRef ROM41C_0_2_12))
+              (portRef DIB1 (instanceRef ROM41C_0_2_12))
+              (portRef DIA1 (instanceRef ROM41C_0_2_12))
+              (portRef DIB0 (instanceRef ROM41C_0_2_12))
+              (portRef DIA0 (instanceRef ROM41C_0_2_12))
+              (portRef CSB2 (instanceRef ROM41C_0_3_11))
+              (portRef CSA2 (instanceRef ROM41C_0_3_11))
+              (portRef CSB1 (instanceRef ROM41C_0_3_11))
+              (portRef CSA1 (instanceRef ROM41C_0_3_11))
+              (portRef CSB0 (instanceRef ROM41C_0_3_11))
+              (portRef RSTB (instanceRef ROM41C_0_3_11))
+              (portRef WEB (instanceRef ROM41C_0_3_11))
+              (portRef WEA (instanceRef ROM41C_0_3_11))
+              (portRef CLKB (instanceRef ROM41C_0_3_11))
+              (portRef ADB12 (instanceRef ROM41C_0_3_11))
+              (portRef ADB11 (instanceRef ROM41C_0_3_11))
+              (portRef ADB10 (instanceRef ROM41C_0_3_11))
+              (portRef ADB9 (instanceRef ROM41C_0_3_11))
+              (portRef ADB8 (instanceRef ROM41C_0_3_11))
+              (portRef ADB7 (instanceRef ROM41C_0_3_11))
+              (portRef ADB6 (instanceRef ROM41C_0_3_11))
+              (portRef ADB5 (instanceRef ROM41C_0_3_11))
+              (portRef ADB4 (instanceRef ROM41C_0_3_11))
+              (portRef ADB3 (instanceRef ROM41C_0_3_11))
+              (portRef ADB2 (instanceRef ROM41C_0_3_11))
+              (portRef ADB1 (instanceRef ROM41C_0_3_11))
+              (portRef ADB0 (instanceRef ROM41C_0_3_11))
+              (portRef DIB8 (instanceRef ROM41C_0_3_11))
+              (portRef DIA8 (instanceRef ROM41C_0_3_11))
+              (portRef DIB7 (instanceRef ROM41C_0_3_11))
+              (portRef DIA7 (instanceRef ROM41C_0_3_11))
+              (portRef DIB6 (instanceRef ROM41C_0_3_11))
+              (portRef DIA6 (instanceRef ROM41C_0_3_11))
+              (portRef DIB5 (instanceRef ROM41C_0_3_11))
+              (portRef DIA5 (instanceRef ROM41C_0_3_11))
+              (portRef DIB4 (instanceRef ROM41C_0_3_11))
+              (portRef DIA4 (instanceRef ROM41C_0_3_11))
+              (portRef DIB3 (instanceRef ROM41C_0_3_11))
+              (portRef DIA3 (instanceRef ROM41C_0_3_11))
+              (portRef DIB2 (instanceRef ROM41C_0_3_11))
+              (portRef DIA2 (instanceRef ROM41C_0_3_11))
+              (portRef DIB1 (instanceRef ROM41C_0_3_11))
+              (portRef DIA1 (instanceRef ROM41C_0_3_11))
+              (portRef DIB0 (instanceRef ROM41C_0_3_11))
+              (portRef DIA0 (instanceRef ROM41C_0_3_11))
+              (portRef CSB2 (instanceRef ROM41C_0_4_10))
+              (portRef CSA2 (instanceRef ROM41C_0_4_10))
+              (portRef CSB1 (instanceRef ROM41C_0_4_10))
+              (portRef CSA1 (instanceRef ROM41C_0_4_10))
+              (portRef CSB0 (instanceRef ROM41C_0_4_10))
+              (portRef RSTB (instanceRef ROM41C_0_4_10))
+              (portRef WEB (instanceRef ROM41C_0_4_10))
+              (portRef WEA (instanceRef ROM41C_0_4_10))
+              (portRef CLKB (instanceRef ROM41C_0_4_10))
+              (portRef ADB12 (instanceRef ROM41C_0_4_10))
+              (portRef ADB11 (instanceRef ROM41C_0_4_10))
+              (portRef ADB10 (instanceRef ROM41C_0_4_10))
+              (portRef ADB9 (instanceRef ROM41C_0_4_10))
+              (portRef ADB8 (instanceRef ROM41C_0_4_10))
+              (portRef ADB7 (instanceRef ROM41C_0_4_10))
+              (portRef ADB6 (instanceRef ROM41C_0_4_10))
+              (portRef ADB5 (instanceRef ROM41C_0_4_10))
+              (portRef ADB4 (instanceRef ROM41C_0_4_10))
+              (portRef ADB3 (instanceRef ROM41C_0_4_10))
+              (portRef ADB2 (instanceRef ROM41C_0_4_10))
+              (portRef ADB1 (instanceRef ROM41C_0_4_10))
+              (portRef ADB0 (instanceRef ROM41C_0_4_10))
+              (portRef DIB8 (instanceRef ROM41C_0_4_10))
+              (portRef DIA8 (instanceRef ROM41C_0_4_10))
+              (portRef DIB7 (instanceRef ROM41C_0_4_10))
+              (portRef DIA7 (instanceRef ROM41C_0_4_10))
+              (portRef DIB6 (instanceRef ROM41C_0_4_10))
+              (portRef DIA6 (instanceRef ROM41C_0_4_10))
+              (portRef DIB5 (instanceRef ROM41C_0_4_10))
+              (portRef DIA5 (instanceRef ROM41C_0_4_10))
+              (portRef DIB4 (instanceRef ROM41C_0_4_10))
+              (portRef DIA4 (instanceRef ROM41C_0_4_10))
+              (portRef DIB3 (instanceRef ROM41C_0_4_10))
+              (portRef DIA3 (instanceRef ROM41C_0_4_10))
+              (portRef DIB2 (instanceRef ROM41C_0_4_10))
+              (portRef DIA2 (instanceRef ROM41C_0_4_10))
+              (portRef DIB1 (instanceRef ROM41C_0_4_10))
+              (portRef DIA1 (instanceRef ROM41C_0_4_10))
+              (portRef DIB0 (instanceRef ROM41C_0_4_10))
+              (portRef DIA0 (instanceRef ROM41C_0_4_10))
+              (portRef CSB2 (instanceRef ROM41C_0_5_9))
+              (portRef CSA2 (instanceRef ROM41C_0_5_9))
+              (portRef CSB1 (instanceRef ROM41C_0_5_9))
+              (portRef CSA1 (instanceRef ROM41C_0_5_9))
+              (portRef CSB0 (instanceRef ROM41C_0_5_9))
+              (portRef RSTB (instanceRef ROM41C_0_5_9))
+              (portRef WEB (instanceRef ROM41C_0_5_9))
+              (portRef WEA (instanceRef ROM41C_0_5_9))
+              (portRef CLKB (instanceRef ROM41C_0_5_9))
+              (portRef ADB12 (instanceRef ROM41C_0_5_9))
+              (portRef ADB11 (instanceRef ROM41C_0_5_9))
+              (portRef ADB10 (instanceRef ROM41C_0_5_9))
+              (portRef ADB9 (instanceRef ROM41C_0_5_9))
+              (portRef ADB8 (instanceRef ROM41C_0_5_9))
+              (portRef ADB7 (instanceRef ROM41C_0_5_9))
+              (portRef ADB6 (instanceRef ROM41C_0_5_9))
+              (portRef ADB5 (instanceRef ROM41C_0_5_9))
+              (portRef ADB4 (instanceRef ROM41C_0_5_9))
+              (portRef ADB3 (instanceRef ROM41C_0_5_9))
+              (portRef ADB2 (instanceRef ROM41C_0_5_9))
+              (portRef ADB1 (instanceRef ROM41C_0_5_9))
+              (portRef ADB0 (instanceRef ROM41C_0_5_9))
+              (portRef DIB8 (instanceRef ROM41C_0_5_9))
+              (portRef DIA8 (instanceRef ROM41C_0_5_9))
+              (portRef DIB7 (instanceRef ROM41C_0_5_9))
+              (portRef DIA7 (instanceRef ROM41C_0_5_9))
+              (portRef DIB6 (instanceRef ROM41C_0_5_9))
+              (portRef DIA6 (instanceRef ROM41C_0_5_9))
+              (portRef DIB5 (instanceRef ROM41C_0_5_9))
+              (portRef DIA5 (instanceRef ROM41C_0_5_9))
+              (portRef DIB4 (instanceRef ROM41C_0_5_9))
+              (portRef DIA4 (instanceRef ROM41C_0_5_9))
+              (portRef DIB3 (instanceRef ROM41C_0_5_9))
+              (portRef DIA3 (instanceRef ROM41C_0_5_9))
+              (portRef DIB2 (instanceRef ROM41C_0_5_9))
+              (portRef DIA2 (instanceRef ROM41C_0_5_9))
+              (portRef DIB1 (instanceRef ROM41C_0_5_9))
+              (portRef DIA1 (instanceRef ROM41C_0_5_9))
+              (portRef DIB0 (instanceRef ROM41C_0_5_9))
+              (portRef DIA0 (instanceRef ROM41C_0_5_9))
+              (portRef CSB2 (instanceRef ROM41C_0_6_8))
+              (portRef CSA2 (instanceRef ROM41C_0_6_8))
+              (portRef CSB1 (instanceRef ROM41C_0_6_8))
+              (portRef CSA1 (instanceRef ROM41C_0_6_8))
+              (portRef CSB0 (instanceRef ROM41C_0_6_8))
+              (portRef RSTB (instanceRef ROM41C_0_6_8))
+              (portRef WEB (instanceRef ROM41C_0_6_8))
+              (portRef WEA (instanceRef ROM41C_0_6_8))
+              (portRef CLKB (instanceRef ROM41C_0_6_8))
+              (portRef ADB12 (instanceRef ROM41C_0_6_8))
+              (portRef ADB11 (instanceRef ROM41C_0_6_8))
+              (portRef ADB10 (instanceRef ROM41C_0_6_8))
+              (portRef ADB9 (instanceRef ROM41C_0_6_8))
+              (portRef ADB8 (instanceRef ROM41C_0_6_8))
+              (portRef ADB7 (instanceRef ROM41C_0_6_8))
+              (portRef ADB6 (instanceRef ROM41C_0_6_8))
+              (portRef ADB5 (instanceRef ROM41C_0_6_8))
+              (portRef ADB4 (instanceRef ROM41C_0_6_8))
+              (portRef ADB3 (instanceRef ROM41C_0_6_8))
+              (portRef ADB2 (instanceRef ROM41C_0_6_8))
+              (portRef ADB1 (instanceRef ROM41C_0_6_8))
+              (portRef ADB0 (instanceRef ROM41C_0_6_8))
+              (portRef DIB8 (instanceRef ROM41C_0_6_8))
+              (portRef DIA8 (instanceRef ROM41C_0_6_8))
+              (portRef DIB7 (instanceRef ROM41C_0_6_8))
+              (portRef DIA7 (instanceRef ROM41C_0_6_8))
+              (portRef DIB6 (instanceRef ROM41C_0_6_8))
+              (portRef DIA6 (instanceRef ROM41C_0_6_8))
+              (portRef DIB5 (instanceRef ROM41C_0_6_8))
+              (portRef DIA5 (instanceRef ROM41C_0_6_8))
+              (portRef DIB4 (instanceRef ROM41C_0_6_8))
+              (portRef DIA4 (instanceRef ROM41C_0_6_8))
+              (portRef DIB3 (instanceRef ROM41C_0_6_8))
+              (portRef DIA3 (instanceRef ROM41C_0_6_8))
+              (portRef DIB2 (instanceRef ROM41C_0_6_8))
+              (portRef DIA2 (instanceRef ROM41C_0_6_8))
+              (portRef DIB1 (instanceRef ROM41C_0_6_8))
+              (portRef DIA1 (instanceRef ROM41C_0_6_8))
+              (portRef DIB0 (instanceRef ROM41C_0_6_8))
+              (portRef DIA0 (instanceRef ROM41C_0_6_8))
+              (portRef CSB2 (instanceRef ROM41C_0_7_7))
+              (portRef CSA2 (instanceRef ROM41C_0_7_7))
+              (portRef CSB1 (instanceRef ROM41C_0_7_7))
+              (portRef CSA1 (instanceRef ROM41C_0_7_7))
+              (portRef CSB0 (instanceRef ROM41C_0_7_7))
+              (portRef RSTB (instanceRef ROM41C_0_7_7))
+              (portRef WEB (instanceRef ROM41C_0_7_7))
+              (portRef WEA (instanceRef ROM41C_0_7_7))
+              (portRef CLKB (instanceRef ROM41C_0_7_7))
+              (portRef ADB12 (instanceRef ROM41C_0_7_7))
+              (portRef ADB11 (instanceRef ROM41C_0_7_7))
+              (portRef ADB10 (instanceRef ROM41C_0_7_7))
+              (portRef ADB9 (instanceRef ROM41C_0_7_7))
+              (portRef ADB8 (instanceRef ROM41C_0_7_7))
+              (portRef ADB7 (instanceRef ROM41C_0_7_7))
+              (portRef ADB6 (instanceRef ROM41C_0_7_7))
+              (portRef ADB5 (instanceRef ROM41C_0_7_7))
+              (portRef ADB4 (instanceRef ROM41C_0_7_7))
+              (portRef ADB3 (instanceRef ROM41C_0_7_7))
+              (portRef ADB2 (instanceRef ROM41C_0_7_7))
+              (portRef ADB1 (instanceRef ROM41C_0_7_7))
+              (portRef ADB0 (instanceRef ROM41C_0_7_7))
+              (portRef DIB8 (instanceRef ROM41C_0_7_7))
+              (portRef DIA8 (instanceRef ROM41C_0_7_7))
+              (portRef DIB7 (instanceRef ROM41C_0_7_7))
+              (portRef DIA7 (instanceRef ROM41C_0_7_7))
+              (portRef DIB6 (instanceRef ROM41C_0_7_7))
+              (portRef DIA6 (instanceRef ROM41C_0_7_7))
+              (portRef DIB5 (instanceRef ROM41C_0_7_7))
+              (portRef DIA5 (instanceRef ROM41C_0_7_7))
+              (portRef DIB4 (instanceRef ROM41C_0_7_7))
+              (portRef DIA4 (instanceRef ROM41C_0_7_7))
+              (portRef DIB3 (instanceRef ROM41C_0_7_7))
+              (portRef DIA3 (instanceRef ROM41C_0_7_7))
+              (portRef DIB2 (instanceRef ROM41C_0_7_7))
+              (portRef DIA2 (instanceRef ROM41C_0_7_7))
+              (portRef DIB1 (instanceRef ROM41C_0_7_7))
+              (portRef DIA1 (instanceRef ROM41C_0_7_7))
+              (portRef DIB0 (instanceRef ROM41C_0_7_7))
+              (portRef DIA0 (instanceRef ROM41C_0_7_7))
+              (portRef CSB2 (instanceRef ROM41C_0_8_6))
+              (portRef CSA2 (instanceRef ROM41C_0_8_6))
+              (portRef CSB1 (instanceRef ROM41C_0_8_6))
+              (portRef CSA1 (instanceRef ROM41C_0_8_6))
+              (portRef CSB0 (instanceRef ROM41C_0_8_6))
+              (portRef RSTB (instanceRef ROM41C_0_8_6))
+              (portRef WEB (instanceRef ROM41C_0_8_6))
+              (portRef WEA (instanceRef ROM41C_0_8_6))
+              (portRef CLKB (instanceRef ROM41C_0_8_6))
+              (portRef ADB12 (instanceRef ROM41C_0_8_6))
+              (portRef ADB11 (instanceRef ROM41C_0_8_6))
+              (portRef ADB10 (instanceRef ROM41C_0_8_6))
+              (portRef ADB9 (instanceRef ROM41C_0_8_6))
+              (portRef ADB8 (instanceRef ROM41C_0_8_6))
+              (portRef ADB7 (instanceRef ROM41C_0_8_6))
+              (portRef ADB6 (instanceRef ROM41C_0_8_6))
+              (portRef ADB5 (instanceRef ROM41C_0_8_6))
+              (portRef ADB4 (instanceRef ROM41C_0_8_6))
+              (portRef ADB3 (instanceRef ROM41C_0_8_6))
+              (portRef ADB2 (instanceRef ROM41C_0_8_6))
+              (portRef ADB1 (instanceRef ROM41C_0_8_6))
+              (portRef ADB0 (instanceRef ROM41C_0_8_6))
+              (portRef DIB8 (instanceRef ROM41C_0_8_6))
+              (portRef DIA8 (instanceRef ROM41C_0_8_6))
+              (portRef DIB7 (instanceRef ROM41C_0_8_6))
+              (portRef DIA7 (instanceRef ROM41C_0_8_6))
+              (portRef DIB6 (instanceRef ROM41C_0_8_6))
+              (portRef DIA6 (instanceRef ROM41C_0_8_6))
+              (portRef DIB5 (instanceRef ROM41C_0_8_6))
+              (portRef DIA5 (instanceRef ROM41C_0_8_6))
+              (portRef DIB4 (instanceRef ROM41C_0_8_6))
+              (portRef DIA4 (instanceRef ROM41C_0_8_6))
+              (portRef DIB3 (instanceRef ROM41C_0_8_6))
+              (portRef DIA3 (instanceRef ROM41C_0_8_6))
+              (portRef DIB2 (instanceRef ROM41C_0_8_6))
+              (portRef DIA2 (instanceRef ROM41C_0_8_6))
+              (portRef DIB1 (instanceRef ROM41C_0_8_6))
+              (portRef DIA1 (instanceRef ROM41C_0_8_6))
+              (portRef DIB0 (instanceRef ROM41C_0_8_6))
+              (portRef DIA0 (instanceRef ROM41C_0_8_6))
+              (portRef CSB2 (instanceRef ROM41C_0_9_5))
+              (portRef CSA2 (instanceRef ROM41C_0_9_5))
+              (portRef CSB1 (instanceRef ROM41C_0_9_5))
+              (portRef CSA1 (instanceRef ROM41C_0_9_5))
+              (portRef CSB0 (instanceRef ROM41C_0_9_5))
+              (portRef RSTB (instanceRef ROM41C_0_9_5))
+              (portRef WEB (instanceRef ROM41C_0_9_5))
+              (portRef WEA (instanceRef ROM41C_0_9_5))
+              (portRef CLKB (instanceRef ROM41C_0_9_5))
+              (portRef ADB12 (instanceRef ROM41C_0_9_5))
+              (portRef ADB11 (instanceRef ROM41C_0_9_5))
+              (portRef ADB10 (instanceRef ROM41C_0_9_5))
+              (portRef ADB9 (instanceRef ROM41C_0_9_5))
+              (portRef ADB8 (instanceRef ROM41C_0_9_5))
+              (portRef ADB7 (instanceRef ROM41C_0_9_5))
+              (portRef ADB6 (instanceRef ROM41C_0_9_5))
+              (portRef ADB5 (instanceRef ROM41C_0_9_5))
+              (portRef ADB4 (instanceRef ROM41C_0_9_5))
+              (portRef ADB3 (instanceRef ROM41C_0_9_5))
+              (portRef ADB2 (instanceRef ROM41C_0_9_5))
+              (portRef ADB1 (instanceRef ROM41C_0_9_5))
+              (portRef ADB0 (instanceRef ROM41C_0_9_5))
+              (portRef DIB8 (instanceRef ROM41C_0_9_5))
+              (portRef DIA8 (instanceRef ROM41C_0_9_5))
+              (portRef DIB7 (instanceRef ROM41C_0_9_5))
+              (portRef DIA7 (instanceRef ROM41C_0_9_5))
+              (portRef DIB6 (instanceRef ROM41C_0_9_5))
+              (portRef DIA6 (instanceRef ROM41C_0_9_5))
+              (portRef DIB5 (instanceRef ROM41C_0_9_5))
+              (portRef DIA5 (instanceRef ROM41C_0_9_5))
+              (portRef DIB4 (instanceRef ROM41C_0_9_5))
+              (portRef DIA4 (instanceRef ROM41C_0_9_5))
+              (portRef DIB3 (instanceRef ROM41C_0_9_5))
+              (portRef DIA3 (instanceRef ROM41C_0_9_5))
+              (portRef DIB2 (instanceRef ROM41C_0_9_5))
+              (portRef DIA2 (instanceRef ROM41C_0_9_5))
+              (portRef DIB1 (instanceRef ROM41C_0_9_5))
+              (portRef DIA1 (instanceRef ROM41C_0_9_5))
+              (portRef DIB0 (instanceRef ROM41C_0_9_5))
+              (portRef DIA0 (instanceRef ROM41C_0_9_5))
+              (portRef CSB2 (instanceRef ROM41C_1_0_4))
+              (portRef CSA2 (instanceRef ROM41C_1_0_4))
+              (portRef CSB1 (instanceRef ROM41C_1_0_4))
+              (portRef CSB0 (instanceRef ROM41C_1_0_4))
+              (portRef RSTB (instanceRef ROM41C_1_0_4))
+              (portRef WEB (instanceRef ROM41C_1_0_4))
+              (portRef WEA (instanceRef ROM41C_1_0_4))
+              (portRef CLKB (instanceRef ROM41C_1_0_4))
+              (portRef ADB12 (instanceRef ROM41C_1_0_4))
+              (portRef ADB11 (instanceRef ROM41C_1_0_4))
+              (portRef ADB10 (instanceRef ROM41C_1_0_4))
+              (portRef ADB9 (instanceRef ROM41C_1_0_4))
+              (portRef ADB8 (instanceRef ROM41C_1_0_4))
+              (portRef ADB7 (instanceRef ROM41C_1_0_4))
+              (portRef ADB6 (instanceRef ROM41C_1_0_4))
+              (portRef ADB5 (instanceRef ROM41C_1_0_4))
+              (portRef ADB4 (instanceRef ROM41C_1_0_4))
+              (portRef ADB3 (instanceRef ROM41C_1_0_4))
+              (portRef ADB2 (instanceRef ROM41C_1_0_4))
+              (portRef ADB1 (instanceRef ROM41C_1_0_4))
+              (portRef ADB0 (instanceRef ROM41C_1_0_4))
+              (portRef ADA0 (instanceRef ROM41C_1_0_4))
+              (portRef DIB8 (instanceRef ROM41C_1_0_4))
+              (portRef DIA8 (instanceRef ROM41C_1_0_4))
+              (portRef DIB7 (instanceRef ROM41C_1_0_4))
+              (portRef DIA7 (instanceRef ROM41C_1_0_4))
+              (portRef DIB6 (instanceRef ROM41C_1_0_4))
+              (portRef DIA6 (instanceRef ROM41C_1_0_4))
+              (portRef DIB5 (instanceRef ROM41C_1_0_4))
+              (portRef DIA5 (instanceRef ROM41C_1_0_4))
+              (portRef DIB4 (instanceRef ROM41C_1_0_4))
+              (portRef DIA4 (instanceRef ROM41C_1_0_4))
+              (portRef DIB3 (instanceRef ROM41C_1_0_4))
+              (portRef DIA3 (instanceRef ROM41C_1_0_4))
+              (portRef DIB2 (instanceRef ROM41C_1_0_4))
+              (portRef DIA2 (instanceRef ROM41C_1_0_4))
+              (portRef DIB1 (instanceRef ROM41C_1_0_4))
+              (portRef DIA1 (instanceRef ROM41C_1_0_4))
+              (portRef DIB0 (instanceRef ROM41C_1_0_4))
+              (portRef DIA0 (instanceRef ROM41C_1_0_4))
+              (portRef CSB2 (instanceRef ROM41C_1_1_3))
+              (portRef CSA2 (instanceRef ROM41C_1_1_3))
+              (portRef CSB1 (instanceRef ROM41C_1_1_3))
+              (portRef CSB0 (instanceRef ROM41C_1_1_3))
+              (portRef RSTB (instanceRef ROM41C_1_1_3))
+              (portRef WEB (instanceRef ROM41C_1_1_3))
+              (portRef WEA (instanceRef ROM41C_1_1_3))
+              (portRef CLKB (instanceRef ROM41C_1_1_3))
+              (portRef ADB12 (instanceRef ROM41C_1_1_3))
+              (portRef ADB11 (instanceRef ROM41C_1_1_3))
+              (portRef ADB10 (instanceRef ROM41C_1_1_3))
+              (portRef ADB9 (instanceRef ROM41C_1_1_3))
+              (portRef ADB8 (instanceRef ROM41C_1_1_3))
+              (portRef ADB7 (instanceRef ROM41C_1_1_3))
+              (portRef ADB6 (instanceRef ROM41C_1_1_3))
+              (portRef ADB5 (instanceRef ROM41C_1_1_3))
+              (portRef ADB4 (instanceRef ROM41C_1_1_3))
+              (portRef ADB3 (instanceRef ROM41C_1_1_3))
+              (portRef ADB2 (instanceRef ROM41C_1_1_3))
+              (portRef ADB1 (instanceRef ROM41C_1_1_3))
+              (portRef ADB0 (instanceRef ROM41C_1_1_3))
+              (portRef ADA0 (instanceRef ROM41C_1_1_3))
+              (portRef DIB8 (instanceRef ROM41C_1_1_3))
+              (portRef DIA8 (instanceRef ROM41C_1_1_3))
+              (portRef DIB7 (instanceRef ROM41C_1_1_3))
+              (portRef DIA7 (instanceRef ROM41C_1_1_3))
+              (portRef DIB6 (instanceRef ROM41C_1_1_3))
+              (portRef DIA6 (instanceRef ROM41C_1_1_3))
+              (portRef DIB5 (instanceRef ROM41C_1_1_3))
+              (portRef DIA5 (instanceRef ROM41C_1_1_3))
+              (portRef DIB4 (instanceRef ROM41C_1_1_3))
+              (portRef DIA4 (instanceRef ROM41C_1_1_3))
+              (portRef DIB3 (instanceRef ROM41C_1_1_3))
+              (portRef DIA3 (instanceRef ROM41C_1_1_3))
+              (portRef DIB2 (instanceRef ROM41C_1_1_3))
+              (portRef DIA2 (instanceRef ROM41C_1_1_3))
+              (portRef DIB1 (instanceRef ROM41C_1_1_3))
+              (portRef DIA1 (instanceRef ROM41C_1_1_3))
+              (portRef DIB0 (instanceRef ROM41C_1_1_3))
+              (portRef DIA0 (instanceRef ROM41C_1_1_3))
+              (portRef CSB2 (instanceRef ROM41C_1_2_2))
+              (portRef CSA2 (instanceRef ROM41C_1_2_2))
+              (portRef CSB1 (instanceRef ROM41C_1_2_2))
+              (portRef CSB0 (instanceRef ROM41C_1_2_2))
+              (portRef RSTB (instanceRef ROM41C_1_2_2))
+              (portRef WEB (instanceRef ROM41C_1_2_2))
+              (portRef WEA (instanceRef ROM41C_1_2_2))
+              (portRef CLKB (instanceRef ROM41C_1_2_2))
+              (portRef ADB12 (instanceRef ROM41C_1_2_2))
+              (portRef ADB11 (instanceRef ROM41C_1_2_2))
+              (portRef ADB10 (instanceRef ROM41C_1_2_2))
+              (portRef ADB9 (instanceRef ROM41C_1_2_2))
+              (portRef ADB8 (instanceRef ROM41C_1_2_2))
+              (portRef ADB7 (instanceRef ROM41C_1_2_2))
+              (portRef ADB6 (instanceRef ROM41C_1_2_2))
+              (portRef ADB5 (instanceRef ROM41C_1_2_2))
+              (portRef ADB4 (instanceRef ROM41C_1_2_2))
+              (portRef ADB3 (instanceRef ROM41C_1_2_2))
+              (portRef ADB2 (instanceRef ROM41C_1_2_2))
+              (portRef ADB1 (instanceRef ROM41C_1_2_2))
+              (portRef ADB0 (instanceRef ROM41C_1_2_2))
+              (portRef ADA0 (instanceRef ROM41C_1_2_2))
+              (portRef DIB8 (instanceRef ROM41C_1_2_2))
+              (portRef DIA8 (instanceRef ROM41C_1_2_2))
+              (portRef DIB7 (instanceRef ROM41C_1_2_2))
+              (portRef DIA7 (instanceRef ROM41C_1_2_2))
+              (portRef DIB6 (instanceRef ROM41C_1_2_2))
+              (portRef DIA6 (instanceRef ROM41C_1_2_2))
+              (portRef DIB5 (instanceRef ROM41C_1_2_2))
+              (portRef DIA5 (instanceRef ROM41C_1_2_2))
+              (portRef DIB4 (instanceRef ROM41C_1_2_2))
+              (portRef DIA4 (instanceRef ROM41C_1_2_2))
+              (portRef DIB3 (instanceRef ROM41C_1_2_2))
+              (portRef DIA3 (instanceRef ROM41C_1_2_2))
+              (portRef DIB2 (instanceRef ROM41C_1_2_2))
+              (portRef DIA2 (instanceRef ROM41C_1_2_2))
+              (portRef DIB1 (instanceRef ROM41C_1_2_2))
+              (portRef DIA1 (instanceRef ROM41C_1_2_2))
+              (portRef DIB0 (instanceRef ROM41C_1_2_2))
+              (portRef DIA0 (instanceRef ROM41C_1_2_2))
+              (portRef CSB2 (instanceRef ROM41C_1_3_1))
+              (portRef CSA2 (instanceRef ROM41C_1_3_1))
+              (portRef CSB1 (instanceRef ROM41C_1_3_1))
+              (portRef CSB0 (instanceRef ROM41C_1_3_1))
+              (portRef RSTB (instanceRef ROM41C_1_3_1))
+              (portRef WEB (instanceRef ROM41C_1_3_1))
+              (portRef WEA (instanceRef ROM41C_1_3_1))
+              (portRef CLKB (instanceRef ROM41C_1_3_1))
+              (portRef ADB12 (instanceRef ROM41C_1_3_1))
+              (portRef ADB11 (instanceRef ROM41C_1_3_1))
+              (portRef ADB10 (instanceRef ROM41C_1_3_1))
+              (portRef ADB9 (instanceRef ROM41C_1_3_1))
+              (portRef ADB8 (instanceRef ROM41C_1_3_1))
+              (portRef ADB7 (instanceRef ROM41C_1_3_1))
+              (portRef ADB6 (instanceRef ROM41C_1_3_1))
+              (portRef ADB5 (instanceRef ROM41C_1_3_1))
+              (portRef ADB4 (instanceRef ROM41C_1_3_1))
+              (portRef ADB3 (instanceRef ROM41C_1_3_1))
+              (portRef ADB2 (instanceRef ROM41C_1_3_1))
+              (portRef ADB1 (instanceRef ROM41C_1_3_1))
+              (portRef ADB0 (instanceRef ROM41C_1_3_1))
+              (portRef ADA0 (instanceRef ROM41C_1_3_1))
+              (portRef DIB8 (instanceRef ROM41C_1_3_1))
+              (portRef DIA8 (instanceRef ROM41C_1_3_1))
+              (portRef DIB7 (instanceRef ROM41C_1_3_1))
+              (portRef DIA7 (instanceRef ROM41C_1_3_1))
+              (portRef DIB6 (instanceRef ROM41C_1_3_1))
+              (portRef DIA6 (instanceRef ROM41C_1_3_1))
+              (portRef DIB5 (instanceRef ROM41C_1_3_1))
+              (portRef DIA5 (instanceRef ROM41C_1_3_1))
+              (portRef DIB4 (instanceRef ROM41C_1_3_1))
+              (portRef DIA4 (instanceRef ROM41C_1_3_1))
+              (portRef DIB3 (instanceRef ROM41C_1_3_1))
+              (portRef DIA3 (instanceRef ROM41C_1_3_1))
+              (portRef DIB2 (instanceRef ROM41C_1_3_1))
+              (portRef DIA2 (instanceRef ROM41C_1_3_1))
+              (portRef DIB1 (instanceRef ROM41C_1_3_1))
+              (portRef DIA1 (instanceRef ROM41C_1_3_1))
+              (portRef DIB0 (instanceRef ROM41C_1_3_1))
+              (portRef DIA0 (instanceRef ROM41C_1_3_1))
+              (portRef CSB2 (instanceRef ROM41C_1_4_0))
+              (portRef CSA2 (instanceRef ROM41C_1_4_0))
+              (portRef CSB1 (instanceRef ROM41C_1_4_0))
+              (portRef CSB0 (instanceRef ROM41C_1_4_0))
+              (portRef RSTB (instanceRef ROM41C_1_4_0))
+              (portRef WEB (instanceRef ROM41C_1_4_0))
+              (portRef WEA (instanceRef ROM41C_1_4_0))
+              (portRef CLKB (instanceRef ROM41C_1_4_0))
+              (portRef ADB12 (instanceRef ROM41C_1_4_0))
+              (portRef ADB11 (instanceRef ROM41C_1_4_0))
+              (portRef ADB10 (instanceRef ROM41C_1_4_0))
+              (portRef ADB9 (instanceRef ROM41C_1_4_0))
+              (portRef ADB8 (instanceRef ROM41C_1_4_0))
+              (portRef ADB7 (instanceRef ROM41C_1_4_0))
+              (portRef ADB6 (instanceRef ROM41C_1_4_0))
+              (portRef ADB5 (instanceRef ROM41C_1_4_0))
+              (portRef ADB4 (instanceRef ROM41C_1_4_0))
+              (portRef ADB3 (instanceRef ROM41C_1_4_0))
+              (portRef ADB2 (instanceRef ROM41C_1_4_0))
+              (portRef ADB1 (instanceRef ROM41C_1_4_0))
+              (portRef ADB0 (instanceRef ROM41C_1_4_0))
+              (portRef ADA0 (instanceRef ROM41C_1_4_0))
+              (portRef DIB8 (instanceRef ROM41C_1_4_0))
+              (portRef DIA8 (instanceRef ROM41C_1_4_0))
+              (portRef DIB7 (instanceRef ROM41C_1_4_0))
+              (portRef DIA7 (instanceRef ROM41C_1_4_0))
+              (portRef DIB6 (instanceRef ROM41C_1_4_0))
+              (portRef DIA6 (instanceRef ROM41C_1_4_0))
+              (portRef DIB5 (instanceRef ROM41C_1_4_0))
+              (portRef DIA5 (instanceRef ROM41C_1_4_0))
+              (portRef DIB4 (instanceRef ROM41C_1_4_0))
+              (portRef DIA4 (instanceRef ROM41C_1_4_0))
+              (portRef DIB3 (instanceRef ROM41C_1_4_0))
+              (portRef DIA3 (instanceRef ROM41C_1_4_0))
+              (portRef DIB2 (instanceRef ROM41C_1_4_0))
+              (portRef DIA2 (instanceRef ROM41C_1_4_0))
+              (portRef DIB1 (instanceRef ROM41C_1_4_0))
+              (portRef DIA1 (instanceRef ROM41C_1_4_0))
+              (portRef DIB0 (instanceRef ROM41C_1_4_0))
+              (portRef DIA0 (instanceRef ROM41C_1_4_0))
+              (portRef CD (instanceRef FF_0))))
+          (net mdout0_1_0
+            (joined
+              (portRef D1 (instanceRef mux_9))
+              (portRef DOA0 (instanceRef ROM41C_1_0_4))))
+          (net mdout0_0_0
+            (joined
+              (portRef D0 (instanceRef mux_9))
+              (portRef DOA0 (instanceRef ROM41C_0_0_14))))
+          (net mdout0_1_1
+            (joined
+              (portRef D1 (instanceRef mux_8))
+              (portRef DOA1 (instanceRef ROM41C_1_0_4))))
+          (net mdout0_0_1
+            (joined
+              (portRef D0 (instanceRef mux_8))
+              (portRef DOA0 (instanceRef ROM41C_0_1_13))))
+          (net mdout0_1_2
+            (joined
+              (portRef D1 (instanceRef mux_7))
+              (portRef DOA0 (instanceRef ROM41C_1_1_3))))
+          (net mdout0_0_2
+            (joined
+              (portRef D0 (instanceRef mux_7))
+              (portRef DOA0 (instanceRef ROM41C_0_2_12))))
+          (net mdout0_1_3
+            (joined
+              (portRef D1 (instanceRef mux_6))
+              (portRef DOA1 (instanceRef ROM41C_1_1_3))))
+          (net mdout0_0_3
+            (joined
+              (portRef D0 (instanceRef mux_6))
+              (portRef DOA0 (instanceRef ROM41C_0_3_11))))
+          (net mdout0_1_4
+            (joined
+              (portRef D1 (instanceRef mux_5))
+              (portRef DOA0 (instanceRef ROM41C_1_2_2))))
+          (net mdout0_0_4
+            (joined
+              (portRef D0 (instanceRef mux_5))
+              (portRef DOA0 (instanceRef ROM41C_0_4_10))))
+          (net mdout0_1_5
+            (joined
+              (portRef D1 (instanceRef mux_4))
+              (portRef DOA1 (instanceRef ROM41C_1_2_2))))
+          (net mdout0_0_5
+            (joined
+              (portRef D0 (instanceRef mux_4))
+              (portRef DOA0 (instanceRef ROM41C_0_5_9))))
+          (net mdout0_1_6
+            (joined
+              (portRef D1 (instanceRef mux_3))
+              (portRef DOA0 (instanceRef ROM41C_1_3_1))))
+          (net mdout0_0_6
+            (joined
+              (portRef D0 (instanceRef mux_3))
+              (portRef DOA0 (instanceRef ROM41C_0_6_8))))
+          (net mdout0_1_7
+            (joined
+              (portRef D1 (instanceRef mux_2))
+              (portRef DOA1 (instanceRef ROM41C_1_3_1))))
+          (net mdout0_0_7
+            (joined
+              (portRef D0 (instanceRef mux_2))
+              (portRef DOA0 (instanceRef ROM41C_0_7_7))))
+          (net mdout0_1_8
+            (joined
+              (portRef D1 (instanceRef mux_1))
+              (portRef DOA0 (instanceRef ROM41C_1_4_0))))
+          (net mdout0_0_8
+            (joined
+              (portRef D0 (instanceRef mux_1))
+              (portRef DOA0 (instanceRef ROM41C_0_8_6))))
+          (net raddr13_ff
+            (joined
+              (portRef SD (instanceRef mux_0))
+              (portRef Q (instanceRef FF_0))
+              (portRef SD (instanceRef mux_9))
+              (portRef SD (instanceRef mux_8))
+              (portRef SD (instanceRef mux_7))
+              (portRef SD (instanceRef mux_6))
+              (portRef SD (instanceRef mux_5))
+              (portRef SD (instanceRef mux_4))
+              (portRef SD (instanceRef mux_3))
+              (portRef SD (instanceRef mux_2))
+              (portRef SD (instanceRef mux_1))))
+          (net mdout0_1_9
+            (joined
+              (portRef D1 (instanceRef mux_0))
+              (portRef DOA1 (instanceRef ROM41C_1_4_0))))
+          (net mdout0_0_9
+            (joined
+              (portRef D0 (instanceRef mux_0))
+              (portRef DOA0 (instanceRef ROM41C_0_9_5))))
+          (net dataout9
+            (joined
+              (portRef (member Q 0))
+              (portRef Z (instanceRef mux_0))))
+          (net dataout8
+            (joined
+              (portRef (member Q 1))
+              (portRef Z (instanceRef mux_1))))
+          (net dataout7
+            (joined
+              (portRef (member Q 2))
+              (portRef Z (instanceRef mux_2))))
+          (net dataout6
+            (joined
+              (portRef (member Q 3))
+              (portRef Z (instanceRef mux_3))))
+          (net dataout5
+            (joined
+              (portRef (member Q 4))
+              (portRef Z (instanceRef mux_4))))
+          (net dataout4
+            (joined
+              (portRef (member Q 5))
+              (portRef Z (instanceRef mux_5))))
+          (net dataout3
+            (joined
+              (portRef (member Q 6))
+              (portRef Z (instanceRef mux_6))))
+          (net dataout2
+            (joined
+              (portRef (member Q 7))
+              (portRef Z (instanceRef mux_7))))
+          (net dataout1
+            (joined
+              (portRef (member Q 8))
+              (portRef Z (instanceRef mux_8))))
+          (net dataout0
+            (joined
+              (portRef (member Q 9))
+              (portRef Z (instanceRef mux_9))))
+          (net Reset
+            (joined
+              (portRef Reset)
+              (portRef RSTA (instanceRef ROM41C_0_0_14))
+              (portRef RSTA (instanceRef ROM41C_0_1_13))
+              (portRef RSTA (instanceRef ROM41C_0_2_12))
+              (portRef RSTA (instanceRef ROM41C_0_3_11))
+              (portRef RSTA (instanceRef ROM41C_0_4_10))
+              (portRef RSTA (instanceRef ROM41C_0_5_9))
+              (portRef RSTA (instanceRef ROM41C_0_6_8))
+              (portRef RSTA (instanceRef ROM41C_0_7_7))
+              (portRef RSTA (instanceRef ROM41C_0_8_6))
+              (portRef RSTA (instanceRef ROM41C_0_9_5))
+              (portRef RSTA (instanceRef ROM41C_1_0_4))
+              (portRef RSTA (instanceRef ROM41C_1_1_3))
+              (portRef RSTA (instanceRef ROM41C_1_2_2))
+              (portRef RSTA (instanceRef ROM41C_1_3_1))
+              (portRef RSTA (instanceRef ROM41C_1_4_0))))
+          (net RdClockEn
+            (joined
+              (portRef OutClockEn)
+              (portRef OCEA (instanceRef ROM41C_0_0_14))
+              (portRef CEA (instanceRef ROM41C_0_0_14))
+              (portRef OCEA (instanceRef ROM41C_0_1_13))
+              (portRef CEA (instanceRef ROM41C_0_1_13))
+              (portRef OCEA (instanceRef ROM41C_0_2_12))
+              (portRef CEA (instanceRef ROM41C_0_2_12))
+              (portRef OCEA (instanceRef ROM41C_0_3_11))
+              (portRef CEA (instanceRef ROM41C_0_3_11))
+              (portRef OCEA (instanceRef ROM41C_0_4_10))
+              (portRef CEA (instanceRef ROM41C_0_4_10))
+              (portRef OCEA (instanceRef ROM41C_0_5_9))
+              (portRef CEA (instanceRef ROM41C_0_5_9))
+              (portRef OCEA (instanceRef ROM41C_0_6_8))
+              (portRef CEA (instanceRef ROM41C_0_6_8))
+              (portRef OCEA (instanceRef ROM41C_0_7_7))
+              (portRef CEA (instanceRef ROM41C_0_7_7))
+              (portRef OCEA (instanceRef ROM41C_0_8_6))
+              (portRef CEA (instanceRef ROM41C_0_8_6))
+              (portRef OCEA (instanceRef ROM41C_0_9_5))
+              (portRef CEA (instanceRef ROM41C_0_9_5))
+              (portRef OCEA (instanceRef ROM41C_1_0_4))
+              (portRef CEA (instanceRef ROM41C_1_0_4))
+              (portRef OCEA (instanceRef ROM41C_1_1_3))
+              (portRef CEA (instanceRef ROM41C_1_1_3))
+              (portRef OCEA (instanceRef ROM41C_1_2_2))
+              (portRef CEA (instanceRef ROM41C_1_2_2))
+              (portRef OCEA (instanceRef ROM41C_1_3_1))
+              (portRef CEA (instanceRef ROM41C_1_3_1))
+              (portRef OCEA (instanceRef ROM41C_1_4_0))
+              (portRef CEA (instanceRef ROM41C_1_4_0))
+              (portRef SP (instanceRef FF_0))))
+          (net rdclk
+            (joined
+              (portRef OutClock)
+              (portRef CLKA (instanceRef ROM41C_0_0_14))
+              (portRef CLKA (instanceRef ROM41C_0_1_13))
+              (portRef CLKA (instanceRef ROM41C_0_2_12))
+              (portRef CLKA (instanceRef ROM41C_0_3_11))
+              (portRef CLKA (instanceRef ROM41C_0_4_10))
+              (portRef CLKA (instanceRef ROM41C_0_5_9))
+              (portRef CLKA (instanceRef ROM41C_0_6_8))
+              (portRef CLKA (instanceRef ROM41C_0_7_7))
+              (portRef CLKA (instanceRef ROM41C_0_8_6))
+              (portRef CLKA (instanceRef ROM41C_0_9_5))
+              (portRef CLKA (instanceRef ROM41C_1_0_4))
+              (portRef CLKA (instanceRef ROM41C_1_1_3))
+              (portRef CLKA (instanceRef ROM41C_1_2_2))
+              (portRef CLKA (instanceRef ROM41C_1_3_1))
+              (portRef CLKA (instanceRef ROM41C_1_4_0))
+              (portRef CK (instanceRef FF_0))))
+          (net raddr13
+            (joined
+              (portRef (member Address 0))
+              (portRef CSA0 (instanceRef ROM41C_0_0_14))
+              (portRef CSA0 (instanceRef ROM41C_0_1_13))
+              (portRef CSA0 (instanceRef ROM41C_0_2_12))
+              (portRef CSA0 (instanceRef ROM41C_0_3_11))
+              (portRef CSA0 (instanceRef ROM41C_0_4_10))
+              (portRef CSA0 (instanceRef ROM41C_0_5_9))
+              (portRef CSA0 (instanceRef ROM41C_0_6_8))
+              (portRef CSA0 (instanceRef ROM41C_0_7_7))
+              (portRef CSA0 (instanceRef ROM41C_0_8_6))
+              (portRef CSA0 (instanceRef ROM41C_0_9_5))
+              (portRef CSA1 (instanceRef ROM41C_1_0_4))
+              (portRef CSA1 (instanceRef ROM41C_1_1_3))
+              (portRef CSA1 (instanceRef ROM41C_1_2_2))
+              (portRef CSA1 (instanceRef ROM41C_1_3_1))
+              (portRef CSA1 (instanceRef ROM41C_1_4_0))
+              (portRef D (instanceRef FF_0))))
+          (net raddr12
+            (joined
+              (portRef (member Address 1))
+              (portRef ADA12 (instanceRef ROM41C_0_0_14))
+              (portRef ADA12 (instanceRef ROM41C_0_1_13))
+              (portRef ADA12 (instanceRef ROM41C_0_2_12))
+              (portRef ADA12 (instanceRef ROM41C_0_3_11))
+              (portRef ADA12 (instanceRef ROM41C_0_4_10))
+              (portRef ADA12 (instanceRef ROM41C_0_5_9))
+              (portRef ADA12 (instanceRef ROM41C_0_6_8))
+              (portRef ADA12 (instanceRef ROM41C_0_7_7))
+              (portRef ADA12 (instanceRef ROM41C_0_8_6))
+              (portRef ADA12 (instanceRef ROM41C_0_9_5))
+              (portRef CSA0 (instanceRef ROM41C_1_0_4))
+              (portRef CSA0 (instanceRef ROM41C_1_1_3))
+              (portRef CSA0 (instanceRef ROM41C_1_2_2))
+              (portRef CSA0 (instanceRef ROM41C_1_3_1))
+              (portRef CSA0 (instanceRef ROM41C_1_4_0))))
+          (net raddr11
+            (joined
+              (portRef (member Address 2))
+              (portRef ADA11 (instanceRef ROM41C_0_0_14))
+              (portRef ADA11 (instanceRef ROM41C_0_1_13))
+              (portRef ADA11 (instanceRef ROM41C_0_2_12))
+              (portRef ADA11 (instanceRef ROM41C_0_3_11))
+              (portRef ADA11 (instanceRef ROM41C_0_4_10))
+              (portRef ADA11 (instanceRef ROM41C_0_5_9))
+              (portRef ADA11 (instanceRef ROM41C_0_6_8))
+              (portRef ADA11 (instanceRef ROM41C_0_7_7))
+              (portRef ADA11 (instanceRef ROM41C_0_8_6))
+              (portRef ADA11 (instanceRef ROM41C_0_9_5))
+              (portRef ADA12 (instanceRef ROM41C_1_0_4))
+              (portRef ADA12 (instanceRef ROM41C_1_1_3))
+              (portRef ADA12 (instanceRef ROM41C_1_2_2))
+              (portRef ADA12 (instanceRef ROM41C_1_3_1))
+              (portRef ADA12 (instanceRef ROM41C_1_4_0))))
+          (net raddr10
+            (joined
+              (portRef (member Address 3))
+              (portRef ADA10 (instanceRef ROM41C_0_0_14))
+              (portRef ADA10 (instanceRef ROM41C_0_1_13))
+              (portRef ADA10 (instanceRef ROM41C_0_2_12))
+              (portRef ADA10 (instanceRef ROM41C_0_3_11))
+              (portRef ADA10 (instanceRef ROM41C_0_4_10))
+              (portRef ADA10 (instanceRef ROM41C_0_5_9))
+              (portRef ADA10 (instanceRef ROM41C_0_6_8))
+              (portRef ADA10 (instanceRef ROM41C_0_7_7))
+              (portRef ADA10 (instanceRef ROM41C_0_8_6))
+              (portRef ADA10 (instanceRef ROM41C_0_9_5))
+              (portRef ADA11 (instanceRef ROM41C_1_0_4))
+              (portRef ADA11 (instanceRef ROM41C_1_1_3))
+              (portRef ADA11 (instanceRef ROM41C_1_2_2))
+              (portRef ADA11 (instanceRef ROM41C_1_3_1))
+              (portRef ADA11 (instanceRef ROM41C_1_4_0))))
+          (net raddr9
+            (joined
+              (portRef (member Address 4))
+              (portRef ADA9 (instanceRef ROM41C_0_0_14))
+              (portRef ADA9 (instanceRef ROM41C_0_1_13))
+              (portRef ADA9 (instanceRef ROM41C_0_2_12))
+              (portRef ADA9 (instanceRef ROM41C_0_3_11))
+              (portRef ADA9 (instanceRef ROM41C_0_4_10))
+              (portRef ADA9 (instanceRef ROM41C_0_5_9))
+              (portRef ADA9 (instanceRef ROM41C_0_6_8))
+              (portRef ADA9 (instanceRef ROM41C_0_7_7))
+              (portRef ADA9 (instanceRef ROM41C_0_8_6))
+              (portRef ADA9 (instanceRef ROM41C_0_9_5))
+              (portRef ADA10 (instanceRef ROM41C_1_0_4))
+              (portRef ADA10 (instanceRef ROM41C_1_1_3))
+              (portRef ADA10 (instanceRef ROM41C_1_2_2))
+              (portRef ADA10 (instanceRef ROM41C_1_3_1))
+              (portRef ADA10 (instanceRef ROM41C_1_4_0))))
+          (net raddr8
+            (joined
+              (portRef (member Address 5))
+              (portRef ADA8 (instanceRef ROM41C_0_0_14))
+              (portRef ADA8 (instanceRef ROM41C_0_1_13))
+              (portRef ADA8 (instanceRef ROM41C_0_2_12))
+              (portRef ADA8 (instanceRef ROM41C_0_3_11))
+              (portRef ADA8 (instanceRef ROM41C_0_4_10))
+              (portRef ADA8 (instanceRef ROM41C_0_5_9))
+              (portRef ADA8 (instanceRef ROM41C_0_6_8))
+              (portRef ADA8 (instanceRef ROM41C_0_7_7))
+              (portRef ADA8 (instanceRef ROM41C_0_8_6))
+              (portRef ADA8 (instanceRef ROM41C_0_9_5))
+              (portRef ADA9 (instanceRef ROM41C_1_0_4))
+              (portRef ADA9 (instanceRef ROM41C_1_1_3))
+              (portRef ADA9 (instanceRef ROM41C_1_2_2))
+              (portRef ADA9 (instanceRef ROM41C_1_3_1))
+              (portRef ADA9 (instanceRef ROM41C_1_4_0))))
+          (net raddr7
+            (joined
+              (portRef (member Address 6))
+              (portRef ADA7 (instanceRef ROM41C_0_0_14))
+              (portRef ADA7 (instanceRef ROM41C_0_1_13))
+              (portRef ADA7 (instanceRef ROM41C_0_2_12))
+              (portRef ADA7 (instanceRef ROM41C_0_3_11))
+              (portRef ADA7 (instanceRef ROM41C_0_4_10))
+              (portRef ADA7 (instanceRef ROM41C_0_5_9))
+              (portRef ADA7 (instanceRef ROM41C_0_6_8))
+              (portRef ADA7 (instanceRef ROM41C_0_7_7))
+              (portRef ADA7 (instanceRef ROM41C_0_8_6))
+              (portRef ADA7 (instanceRef ROM41C_0_9_5))
+              (portRef ADA8 (instanceRef ROM41C_1_0_4))
+              (portRef ADA8 (instanceRef ROM41C_1_1_3))
+              (portRef ADA8 (instanceRef ROM41C_1_2_2))
+              (portRef ADA8 (instanceRef ROM41C_1_3_1))
+              (portRef ADA8 (instanceRef ROM41C_1_4_0))))
+          (net raddr6
+            (joined
+              (portRef (member Address 7))
+              (portRef ADA6 (instanceRef ROM41C_0_0_14))
+              (portRef ADA6 (instanceRef ROM41C_0_1_13))
+              (portRef ADA6 (instanceRef ROM41C_0_2_12))
+              (portRef ADA6 (instanceRef ROM41C_0_3_11))
+              (portRef ADA6 (instanceRef ROM41C_0_4_10))
+              (portRef ADA6 (instanceRef ROM41C_0_5_9))
+              (portRef ADA6 (instanceRef ROM41C_0_6_8))
+              (portRef ADA6 (instanceRef ROM41C_0_7_7))
+              (portRef ADA6 (instanceRef ROM41C_0_8_6))
+              (portRef ADA6 (instanceRef ROM41C_0_9_5))
+              (portRef ADA7 (instanceRef ROM41C_1_0_4))
+              (portRef ADA7 (instanceRef ROM41C_1_1_3))
+              (portRef ADA7 (instanceRef ROM41C_1_2_2))
+              (portRef ADA7 (instanceRef ROM41C_1_3_1))
+              (portRef ADA7 (instanceRef ROM41C_1_4_0))))
+          (net raddr5
+            (joined
+              (portRef (member Address 8))
+              (portRef ADA5 (instanceRef ROM41C_0_0_14))
+              (portRef ADA5 (instanceRef ROM41C_0_1_13))
+              (portRef ADA5 (instanceRef ROM41C_0_2_12))
+              (portRef ADA5 (instanceRef ROM41C_0_3_11))
+              (portRef ADA5 (instanceRef ROM41C_0_4_10))
+              (portRef ADA5 (instanceRef ROM41C_0_5_9))
+              (portRef ADA5 (instanceRef ROM41C_0_6_8))
+              (portRef ADA5 (instanceRef ROM41C_0_7_7))
+              (portRef ADA5 (instanceRef ROM41C_0_8_6))
+              (portRef ADA5 (instanceRef ROM41C_0_9_5))
+              (portRef ADA6 (instanceRef ROM41C_1_0_4))
+              (portRef ADA6 (instanceRef ROM41C_1_1_3))
+              (portRef ADA6 (instanceRef ROM41C_1_2_2))
+              (portRef ADA6 (instanceRef ROM41C_1_3_1))
+              (portRef ADA6 (instanceRef ROM41C_1_4_0))))
+          (net raddr4
+            (joined
+              (portRef (member Address 9))
+              (portRef ADA4 (instanceRef ROM41C_0_0_14))
+              (portRef ADA4 (instanceRef ROM41C_0_1_13))
+              (portRef ADA4 (instanceRef ROM41C_0_2_12))
+              (portRef ADA4 (instanceRef ROM41C_0_3_11))
+              (portRef ADA4 (instanceRef ROM41C_0_4_10))
+              (portRef ADA4 (instanceRef ROM41C_0_5_9))
+              (portRef ADA4 (instanceRef ROM41C_0_6_8))
+              (portRef ADA4 (instanceRef ROM41C_0_7_7))
+              (portRef ADA4 (instanceRef ROM41C_0_8_6))
+              (portRef ADA4 (instanceRef ROM41C_0_9_5))
+              (portRef ADA5 (instanceRef ROM41C_1_0_4))
+              (portRef ADA5 (instanceRef ROM41C_1_1_3))
+              (portRef ADA5 (instanceRef ROM41C_1_2_2))
+              (portRef ADA5 (instanceRef ROM41C_1_3_1))
+              (portRef ADA5 (instanceRef ROM41C_1_4_0))))
+          (net raddr3
+            (joined
+              (portRef (member Address 10))
+              (portRef ADA3 (instanceRef ROM41C_0_0_14))
+              (portRef ADA3 (instanceRef ROM41C_0_1_13))
+              (portRef ADA3 (instanceRef ROM41C_0_2_12))
+              (portRef ADA3 (instanceRef ROM41C_0_3_11))
+              (portRef ADA3 (instanceRef ROM41C_0_4_10))
+              (portRef ADA3 (instanceRef ROM41C_0_5_9))
+              (portRef ADA3 (instanceRef ROM41C_0_6_8))
+              (portRef ADA3 (instanceRef ROM41C_0_7_7))
+              (portRef ADA3 (instanceRef ROM41C_0_8_6))
+              (portRef ADA3 (instanceRef ROM41C_0_9_5))
+              (portRef ADA4 (instanceRef ROM41C_1_0_4))
+              (portRef ADA4 (instanceRef ROM41C_1_1_3))
+              (portRef ADA4 (instanceRef ROM41C_1_2_2))
+              (portRef ADA4 (instanceRef ROM41C_1_3_1))
+              (portRef ADA4 (instanceRef ROM41C_1_4_0))))
+          (net raddr2
+            (joined
+              (portRef (member Address 11))
+              (portRef ADA2 (instanceRef ROM41C_0_0_14))
+              (portRef ADA2 (instanceRef ROM41C_0_1_13))
+              (portRef ADA2 (instanceRef ROM41C_0_2_12))
+              (portRef ADA2 (instanceRef ROM41C_0_3_11))
+              (portRef ADA2 (instanceRef ROM41C_0_4_10))
+              (portRef ADA2 (instanceRef ROM41C_0_5_9))
+              (portRef ADA2 (instanceRef ROM41C_0_6_8))
+              (portRef ADA2 (instanceRef ROM41C_0_7_7))
+              (portRef ADA2 (instanceRef ROM41C_0_8_6))
+              (portRef ADA2 (instanceRef ROM41C_0_9_5))
+              (portRef ADA3 (instanceRef ROM41C_1_0_4))
+              (portRef ADA3 (instanceRef ROM41C_1_1_3))
+              (portRef ADA3 (instanceRef ROM41C_1_2_2))
+              (portRef ADA3 (instanceRef ROM41C_1_3_1))
+              (portRef ADA3 (instanceRef ROM41C_1_4_0))))
+          (net raddr1
+            (joined
+              (portRef (member Address 12))
+              (portRef ADA1 (instanceRef ROM41C_0_0_14))
+              (portRef ADA1 (instanceRef ROM41C_0_1_13))
+              (portRef ADA1 (instanceRef ROM41C_0_2_12))
+              (portRef ADA1 (instanceRef ROM41C_0_3_11))
+              (portRef ADA1 (instanceRef ROM41C_0_4_10))
+              (portRef ADA1 (instanceRef ROM41C_0_5_9))
+              (portRef ADA1 (instanceRef ROM41C_0_6_8))
+              (portRef ADA1 (instanceRef ROM41C_0_7_7))
+              (portRef ADA1 (instanceRef ROM41C_0_8_6))
+              (portRef ADA1 (instanceRef ROM41C_0_9_5))
+              (portRef ADA2 (instanceRef ROM41C_1_0_4))
+              (portRef ADA2 (instanceRef ROM41C_1_1_3))
+              (portRef ADA2 (instanceRef ROM41C_1_2_2))
+              (portRef ADA2 (instanceRef ROM41C_1_3_1))
+              (portRef ADA2 (instanceRef ROM41C_1_4_0))))
+          (net raddr0
+            (joined
+              (portRef (member Address 13))
+              (portRef ADA0 (instanceRef ROM41C_0_0_14))
+              (portRef ADA0 (instanceRef ROM41C_0_1_13))
+              (portRef ADA0 (instanceRef ROM41C_0_2_12))
+              (portRef ADA0 (instanceRef ROM41C_0_3_11))
+              (portRef ADA0 (instanceRef ROM41C_0_4_10))
+              (portRef ADA0 (instanceRef ROM41C_0_5_9))
+              (portRef ADA0 (instanceRef ROM41C_0_6_8))
+              (portRef ADA0 (instanceRef ROM41C_0_7_7))
+              (portRef ADA0 (instanceRef ROM41C_0_8_6))
+              (portRef ADA0 (instanceRef ROM41C_0_9_5))
+              (portRef ADA1 (instanceRef ROM41C_1_0_4))
+              (portRef ADA1 (instanceRef ROM41C_1_1_3))
+              (portRef ADA1 (instanceRef ROM41C_1_2_2))
+              (portRef ADA1 (instanceRef ROM41C_1_3_1))
+              (portRef ADA1 (instanceRef ROM41C_1_4_0))))))))
+  (design ROM41C
+    (cellRef ROM41C
+      (libraryRef ORCLIB)))
+)
